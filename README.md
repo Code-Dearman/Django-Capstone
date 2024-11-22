@@ -56,3 +56,15 @@ For even greater functionality you can use the 'link character' button feature t
 If you feel like customising you profile feel free to choose from a range of provided profile images.
 
 When you've completed your task you can edit the task list and mark it as complete. Feel free to upload a screenshot of your success!
+
+## UX - User Experience
+
+### Accessibility and Responseiveness
+
+_Discuss the accessibility and responsiveness of the app._
+
+### Colour Palette
+
+
+
+### Fonts
