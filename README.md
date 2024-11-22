@@ -116,3 +116,25 @@ The entity relationship diagram for this project was created using [SmartDraw](h
 Fortunately Django contains a lot of inbuilt security features such as CSRF protection, the encrypted storage of passwords and the ability to create a superuser to manage and control what data is entered into the public site. 
 
 This last point was particulary importand for my project as I have a public area where users can post their to-do lists to the home page. The superuser abilites mean that I am able to approve or deny public lists before they are posted to the homepage and thus ensure that there is no sensitive or offensive content. 
+
+## Features
+
+Users can:
+- View public lists on the homepage
+- Create an account
+- Login to their account
+- Create a new to-do list
+- View their to-do lists
+- Request their list to be made public
+- Link their runescape character to their profile
+- Delete their to-do lists
+- Mark their to-do lists as completed
+
+_img of various features_
+
+Superusers can:
+- View all public lists
+- Approve public list requests
+- Create and delete lists
+
+_img of superuser features_
