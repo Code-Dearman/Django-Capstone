@@ -110,3 +110,9 @@ The wire framing for this project was done using the free trial of [wireframe.cc
 The entity relationship diagram for this project was created using [SmartDraw](https://www.smartdraw.com/)
 
 ![RuneTask ERD](assets/readme_img/runetask_erd.png)
+
+## Security
+
+Fortunately Django contains a lot of inbuilt security features such as CSRF protection, the encrypted storage of passwords and the ability to create a superuser to manage and control what data is entered into the public site. 
+
+This last point was particulary importand for my project as I have a public area where users can post their to-do lists to the home page. The superuser abilites mean that I am able to approve or deny public lists before they are posted to the homepage and thus ensure that there is no sensitive or offensive content. 
