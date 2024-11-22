@@ -2,7 +2,7 @@
 
 RuneTask is a simple, users-friendly to-do list web app built with Django. Users can create, manage and track their goals with the option to link their current runescape character details in order to keep track of their goals. This project was created as part of my Code Institute 16 week bootcamp course. The aim is to use the Django framework to create a full-stack project which is hosted on Heroku. There must be a custom database table and the app must provide some CRUD functionality.
 
-_img_
+_img of display on multiple devices_
 
 Live site: _link_
 
@@ -172,3 +172,29 @@ Additional tools and programs used include:
 - [GitHub](https://github.com/) for storing repository
 - Git for version control
 - Gitpod for writing and pushing code to repository. 
+
+## Testing
+
+### Validation Testing
+
+The validation testing was done using the [W3C](https://www.w3.org/) website HTML and CSS validator.
+
+_add images of complete validation testing_
+
+### User Testing
+
+Manual user testing was done by me. I made sure that I could access and perform all the neccessary features, both as user and superuser. This included:
+- Making to-do lists (as user and superuser)
+- Deleting to-do lists (as user and superuser)
+- Requesting lists be made public (as user)
+- Approving lists (as superuser)
+- Linking runescape characters (as user)
+- Creating new accounts (as user)
+
+**Browser Compatablity**: The website was tested Firefox and Chrome for desktop view and Safari and Firefox for mobile view.
+
+**Responsiveness Testing**: I tested the responsiveness of all areas of the website on both desktop and mobile phone views.
+
+### Automated Testing
+
+_Write about automated tests or delete if unable to complete in time_
