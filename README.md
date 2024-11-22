@@ -65,6 +65,8 @@ _Discuss the accessibility and responsiveness of the app._
 
 ### Colour Palette
 
+Given the oldschool, medieval and MMO related nature of the app I chose mostly dark and earth tones for my app. I chose white and off white for the text to maintain readability for users. I asked chatGPT to generate additional colours which suited the palette for positive and negative buttons.
 
+![colour palette](assets/readme_img/runetask_colour_palette.png)
 
 ### Fonts
