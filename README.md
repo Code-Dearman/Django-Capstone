@@ -99,10 +99,14 @@ _MoSCow examples images_
 
 The wire framing for this project was done using the free trial of [wireframe.cc](https://wireframe.cc/). 
 
-_Wire framing images_
+![RuneTask Homepage Wireframe](assets/readme_img/runetask_home_page.png)
+
+![RuneTask Sign-up Page](assets/readme_img/runetask_signup_page.png)
+
+![RuneTask Profile Page](assets/readme_img/runetask_profile_page.png)
 
 ### Entity Relationship Diagram
 
 The entity relationship diagram for this project was created using [SmartDraw](https://www.smartdraw.com/)
 
-_ERD images_
+![RuneTask ERD](assets/readme_img/runetask_erd.png)
