@@ -198,3 +198,38 @@ Manual user testing was done by me. I made sure that I could access and perform 
 ### Automated Testing
 
 _Write about automated tests or delete if unable to complete in time_
+
+## Deployment
+
+### GitHub
+
+This project was created on the Gitpod CDE and Git was used for version control. The repository is stored on GitHub and was linked to Heroku for deployment.
+
+### Django
+
+Django was essential to the deployment process as it works seemlessly with Heroku. Adding allowed hosts in config/settings.py means that you can choose what hosts are allowed for the website. 
+
+### Cloudinary
+
+_Add cloudinary info later_
+
+### PostgreSQL
+
+_add later_
+
+### Heroku
+
+Deploying on Heroku was done with these steps.
+
+- Create a new Heroku app.
+- Choose GitHub as the deployment method in the app dashboard.
+- For my project I did manual deployments from the main branch.
+- Set the config vars in Heroku to match the vars in eny.py to protect secret keys and passwords.
+- Click deploy and wait for Heroku to finishing setting up the website.
+
+### Clone 
+
+
+
+### Fork
+
