@@ -138,3 +138,35 @@ Superusers can:
 - Create and delete lists
 
 _img of superuser features_
+
+## Future Features
+
+- The ability to incoporate player levels directly into the to-do list. Allowing the list to automatically mark as done when the desired level has been reached.
+
+_Add more future features_
+
+### Languages
+
+The languages used for this project were:
+- HTML
+- CSS
+- JavaScript
+- Python
+
+### Frameworks
+
+The frameworks used for this project were:
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+### Tools and Programs
+
+Additional tools and programs used include:
+- [Wireframe.cc](https://wireframe.cc/) for wireframe creation
+- [SmartDraw](https://www.smartdraw.com/) for ERD
+- [chatGPT](https://chatgpt.com/) for general advice and insight on project planning, error checking code snippets and spell checking.
+- [FontAwesome](https://fontawesome.com/) for webpage icons
+- [Googlefonts](https://fonts.google.com/) for fonts
+- [GitHub](https://github.com/) for storing repository
+- Git for version control
+- Gitpod for writing and pushing code to repository. 
