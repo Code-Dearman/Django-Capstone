@@ -70,3 +70,39 @@ Given the oldschool, medieval and MMO related nature of the app I chose mostly d
 ![colour palette](assets/readme_img/runetask_colour_palette.png)
 
 ### Fonts
+
+For the fonts I chose  Metamorphous - Designed by James Grieshaber from GoogleFonts - This suited my medieval style with its serifs but is still quite readable. 
+
+I decided to use the alternative font Roboto - Designed by Christian Robertson for areas where I thought the readability was particularly important such as buttons and notification messages.
+
+![Google Fonts: Metamorphous & Roboto](assets/readme_img/runetask_fonts.png)
+
+## Project Planning
+
+### Agile
+
+This project was created using the agile methodology, particularly in relation to creating granular user stories which streamlines the development process. All of these user stories were gathered into a project kanban board on GitHub where I could pull stories from the backlog to the in progress column. Once I had completed the tasks they were moved into the completed column.  
+
+_img of project board_
+
+### User Stories
+
+_All user stories marked with could should might and wont_
+
+### MoSCoW
+
+All of the user stories I created were sorted using the MoSCoW (Must have, Should Have, Could Have and Wont Have) prioritisation system. This system allowed me to organise my userstories, making sure that all the must haves formed my minimum viable product. Once those were completed I could advance towards including my Should and Could have user stories which would provide extra features for the user and lead to a more finished product. My wont have stories outlines features which were not in the scope of this development cycle but helped me to keep a focus on where the project is leading.
+
+_MoSCow examples images_
+
+### Wiresframes
+
+The wire framing for this project was done using the free trial of [wireframe.cc](https://wireframe.cc/). 
+
+_Wire framing images_
+
+### Entity Relationship Diagram
+
+The entity relationship diagram for this project was created using [SmartDraw](https://www.smartdraw.com/)
+
+_ERD images_
