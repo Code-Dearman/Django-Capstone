@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-rqj&dllzi7qp0xkis_x9^8^r=s*yc8pb+-0@43wzw5uylva=h%
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-codedearman-djangocapst-9526oqp3vv1.ws.codeinstitute-ide.net',
+'rune-task-6f978e78a585.herokuapp.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net',
