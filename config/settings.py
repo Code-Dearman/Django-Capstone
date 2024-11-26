@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-codedearman-djangocapst-9526oqp3vv1.ws.codeinstitute-ide.net',
 'rune-task-6f978e78a585.herokuapp.com'
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'cloudinary_storage',
     'cloudinary',
+    'to_do',
 ]
 
 MIDDLEWARE = [
