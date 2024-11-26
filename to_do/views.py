@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views import generic
+from .models import To_Do_List
 
 # Create your views here.
 
-class HomePage(TemplateView):
+class ToDoListView(generic.ListView):
     """
-    Displays home page
+    Displays to do lists
     """
-    template_name = 'index.html'
+    queryset = To_Do_List.objects.all()
+    template_name = 'to_do/to_do_list.html'
