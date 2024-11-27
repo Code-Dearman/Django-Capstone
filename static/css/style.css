@@ -1,6 +1,8 @@
 /* ----------------------------------------------------- General Styles */
 main {
     background-color: #2B2D42;
+    display: block;
+    overflow: auto;
 }
 
 .flexbox {
