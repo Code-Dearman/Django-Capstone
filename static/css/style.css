@@ -12,11 +12,11 @@ main {
     color: #2B2D42;
 }
 
-.primAccent {
+.primaryAccent {
     color: #8D8741;
 }
 
-.secAccent {
+.secondaryAccent {
     color: #D9BF77;
 }
 
@@ -24,7 +24,7 @@ main {
     color: #EAEAEA;
 }
 
-.textSec {
+.textSecondary {
     color: #FFFFFF;
 }
 
@@ -38,4 +38,19 @@ main {
 
 .borderColour {
     color: #404E4D;
+}
+
+/* ----------------------------------------------------- NavBar */
+.navbar {
+    background-color: #8D8741;
+}
+
+.navbar-toggler {
+    border-color: #EAEAEA;
+}
+
+
+/* ----------------------------------------------------- Footer */
+.footerContainer {
+    background-color: #8D8741;
 }
