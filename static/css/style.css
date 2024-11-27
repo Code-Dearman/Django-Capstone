@@ -1,3 +1,41 @@
-h1 {
-    color: red;
+main {
+    background-color: #2B2D42;
+    height: 85vh;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bgColour {
+    color: #2B2D42;
+}
+
+.primAccent {
+    color: #8D8741;
+}
+
+.secAccent {
+    color: #D9BF77;
+}
+
+.textMain {
+    color: #EAEAEA;
+}
+
+.textSec {
+    color: #FFFFFF;
+}
+
+.highlightError {
+    color: #FF5E57
+}
+
+.hightlightSuccess {
+    color: #81B29A;
+}
+
+.borderColour {
+    color: #404E4D;
 }
