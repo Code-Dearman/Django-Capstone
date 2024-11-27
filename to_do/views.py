@@ -12,3 +12,4 @@ class ToDoListView(generic.ListView):
     """
     queryset = To_Do_List.objects.filter(status=1, approved=True).order_by("-created_on")
     template_name = 'to_do/to_do_list.html'
+    paginate_by = 6

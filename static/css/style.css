@@ -1,7 +1,6 @@
 /* ----------------------------------------------------- General Styles */
 main {
     background-color: #2B2D42;
-    height: 85vh;
 }
 
 .flexbox {
@@ -54,10 +53,15 @@ main {
 }
 
 
-/* ----------------------------------------------------- Footer */
+/* ----------------------------------------------------- Task List Cards */
 .card-body {
     color: #EAEAEA;
     background-color: #404E4D;
+}
+
+.cardTextContainer {
+    overflow-y: auto;
+    height: 300px;
 }
 
 
