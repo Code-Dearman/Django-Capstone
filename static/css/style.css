@@ -1,3 +1,4 @@
+/* ----------------------------------------------------- General Styles */
 main {
     background-color: #2B2D42;
     height: 85vh;
@@ -8,6 +9,8 @@ main {
     flex-wrap: wrap;
 }
 
+
+/* ----------------------------------------------------- Colour Palette */
 .bgColour {
     color: #2B2D42;
 }
@@ -40,6 +43,7 @@ main {
     color: #404E4D;
 }
 
+
 /* ----------------------------------------------------- NavBar */
 .navbar {
     background-color: #8D8741;
@@ -47,6 +51,13 @@ main {
 
 .navbar-toggler {
     border-color: #EAEAEA;
+}
+
+
+/* ----------------------------------------------------- Footer */
+.card-body {
+    color: #EAEAEA;
+    background-color: #404E4D;
 }
 
 
