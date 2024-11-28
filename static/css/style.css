@@ -43,7 +43,7 @@ main {
 }
 
 .highlightError {
-    color: #FF5E57
+    color: #FF5E57;
 }
 
 .hightlightSuccess {
@@ -89,13 +89,27 @@ label {
     color: #EAEAEA;
 }
 
-.logButton {
+.loginButton {
     border-radius: 2px;
     border-width: 2px;
     border-color: #81B29A;;
 }
 
-.logButton:hover {
+.logoutButton {
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: #FF5E57;
+}
+
+.loginButton:hover, .logoutButton:hover {
     color: #81B29A;
     border-color: #8D8741;
+}
+
+.authContainer {
+    align-content: center;
+}
+
+form ul {
+    color: #EAEAEA;
 }

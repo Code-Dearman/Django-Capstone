@@ -4,7 +4,15 @@
 
 <!-- index.html content starts here -->
 
+{% if user.is_authenticated %}
+
+<h1 class="text-center textMain mt-4 mb-2">Welcome back, {{ user }}. Have a look around...</h1>
+
+{% else %}
+
 <h1 class="text-center textMain mt-4 mb-2">What is everyone up to?</h1>
+
+{% endif %}
 
 <div class="container-fluid">
     <div class="row">
