@@ -55,11 +55,11 @@
 
                     <li class="nav-item">
                         <a href="{% url 'account_signup' %}"
-                            class="nav-link {% if request.path == signup_url %} active {% endif %}"></a>
+                            class="nav-link {% if request.path == signup_url %} active {% endif %}">Sign up</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'account_login' %}"
-                            class="nav-link {% if request.path == account_login %} active {% endif %}"></a>
+                            class="nav-link {% if request.path == account_login %} active {% endif %}">Login</a>
                     </li>
                     {% endif %}
 
@@ -73,8 +73,6 @@
     </nav>
 
     <main class="flex-shrink-0 main-bg">
-
-        <h1 class="text-center textMain mt-4 mb-2">What is everyone up to?</h1>
 
         {% block content %}
         <!-- Content Goes here -->

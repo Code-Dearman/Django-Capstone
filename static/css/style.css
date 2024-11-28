@@ -1,8 +1,18 @@
 /* ----------------------------------------------------- General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     background-color: #2B2D42;
-    display: block;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /* display: block;
+    overflow: auto; */
 }
 
 .flexbox {
@@ -70,4 +80,22 @@ main {
 /* ----------------------------------------------------- Footer */
 .footerContainer {
     background-color: #8D8741;
+    margin-top: auto;
+}
+
+
+/* ----------------------------------------------------- Login/Logout/Signup Styles */
+label {
+    color: #EAEAEA;
+}
+
+.logButton {
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: #81B29A;;
+}
+
+.logButton:hover {
+    color: #81B29A;
+    border-color: #8D8741;
 }
