@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Your To-Do Lists</h2>
+    <hr>
+    <ul>
+        {% for task in user_lists %}
+        <li>
+            <strong>{{ task.list_title }}</strong>
+            (Created: {{ task.created_on|date:"M d, Y" }})
+            <a href="{% url 'edit_list' task.id %}">Edit</a>
+        </li>
+        {% empty %}
+        <p>You have no to-do lists yet. <a href="{% url 'add_list' %}"></a></p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
