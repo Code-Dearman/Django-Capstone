@@ -12,7 +12,6 @@
             <a href="{% url 'edit_list' task.id %}">Edit</a>
         </li>
         {% empty %}
-        <p>You have no to-do lists yet. <a href="{% url 'add_list' %}"></a></p>
         {% endfor %}
     </ul>
 </div>
