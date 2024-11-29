@@ -57,11 +57,11 @@
 
                     <li class="nav-item">
                         <a href="{% url 'account_signup' %}"
-                            class="nav-link {% if request.path == signup_url %} active {% endif %}">Sign up</a>
+                            class="nav-link textMain {% if request.path == signup_url %} active {% endif %}">Sign up</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'account_login' %}"
-                            class="nav-link {% if request.path == account_login %} active {% endif %}">Login</a>
+                            class="nav-link textMain {% if request.path == account_login %} active {% endif %}">Login</a>
                     </li>
                     {% endif %}
 

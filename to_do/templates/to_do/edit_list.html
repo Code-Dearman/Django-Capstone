@@ -2,10 +2,12 @@
 
 {% load crispy_forms_tags %}
 
+
+
 {% block content %}
 <div class="container mt-5">
-    <h2 class="textMain">Edit To-Do List</h2>
-    <form method="post">
+    <h2 class="textMain text-center">Edit To-Do List</h2>
+    <form method="post" class="editListForm">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn btn-primary mt-3">Save Changes</button>

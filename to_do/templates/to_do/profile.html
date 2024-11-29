@@ -9,7 +9,7 @@
         <li>
             <strong>{{ task.list_title }}</strong>
             (Created: {{ task.created_on|date:"M d, Y" }})
-            <a href="{% url 'edit_list' task.id %}">Edit</a>
+            <a href="{% url 'edit_list' slug=task.slug %}">Edit</a>
         </li>
         {% empty %}
         {% endfor %}

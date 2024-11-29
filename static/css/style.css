@@ -122,3 +122,12 @@ label {
 form ul {
     color: #EAEAEA;
 }
+
+
+/* ----------------------------------------------------- Edit List Form */
+.editListForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

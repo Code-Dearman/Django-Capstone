@@ -31,21 +31,25 @@ class ProfileView(LoginRequiredMixin, generic.ListView):
         Returns only lists which match the current logged in user.
         """
         return To_Do_List.objects.filter(author=self.request.user)
-    
 
-def edit_list(request, list_id):
+    
+@login_required
+def edit_list(request, slug=None):
     """
     Dispalys and editable form for the user, accepting a post request.
     """
-    to_do_list = get_object_or_404(To_Do_List, id=list_id, author=request.user)
-    if request.method == "POST":
-        form = ToDoListForm(request.POST, instance=to_do_list)
-        if form.is_valid():
-            form.save()
-            return redirect('profile')
-    
+    if slug:
+        todo_list = get_object_or_404(To_Do_List, slug=slug, author=request.user)
+        form = ToDoListForm(request.POST or None, instance=todo_list)
     else:
-        form = ToDoListForm(instance=to_do_list)
+        form = ToDoListForm(request.POST or None)
+
+    if form.is_valid():
+        to_do_list = form.save(commit=False)
+        to_do_list.author = request.user
+        to_do_list.save()
+        return redirect('profile')
+    
     return render(request, 'to_do/edit_list.html', {'form': form})
 
 
