@@ -69,11 +69,20 @@ main {
 .card-body {
     color: #EAEAEA;
     background-color: #404E4D;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
 }
 
 .cardTextContainer {
     overflow-y: auto;
-    height: 300px;
 }
 
 
