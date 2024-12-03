@@ -8,4 +8,5 @@ urlpatterns = [
     path('profile/', views.ProfileView.as_view(), name='profile'),
     path('list/new/', views.edit_list, name='create_list'),
     path('edit/<slug:slug>/', views.edit_list, name='edit_list'),
+    path('delete/<slug:slug>/', views.delete_list, name='delete_list'),
 ]

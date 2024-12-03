@@ -53,3 +53,16 @@ def edit_list(request, slug=None):
     return render(request, 'to_do/edit_list.html', {'form': form})
 
 
+@login_required
+def delete_list(request, slug):
+    """
+    View to delete lists.
+    """
+    to_do_list = get_object_or_404(To_Do_List, slug=slug, author=request.user)
+
+    if request.method == "POST":
+        to_do_list.delete()
+        return redirect('profile')
+
+    return redirect('profile')
+
