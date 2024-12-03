@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -12,7 +13,7 @@ class To_Do_List(models.Model):
     """
 
     list_title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="to_do_list")
     list_content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -24,3 +25,14 @@ class To_Do_List(models.Model):
 
     def __str__(self):
         return f"{self.list_title} | written by: {self.author}"
+
+    def save(self, *args, **kwargs):
+
+        if not self.slug:
+            unique_slug = slugify(self.list_title)
+            counter = 1
+            while To_Do_List.objects.filter(slug=unique_slug).exists():
+                unique_slug = f"{slugify(self.list_title)}-{counter}"
+                counter += 1
+            self.slug = unique_slug
+        super().save(*args, **kwargs)

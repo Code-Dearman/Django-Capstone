@@ -4,6 +4,7 @@
 <div class="container mt-5">
     <h2>Your To-Do Lists</h2>
     <hr>
+    <a href="{% url 'create_list' %}">New List</a>
     <ul>
         {% for task in user_lists %}
         <li>
