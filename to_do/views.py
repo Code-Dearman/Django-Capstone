@@ -36,24 +36,25 @@ class ProfileView(LoginRequiredMixin, generic.ListView):
 @login_required
 def edit_list(request, slug=None):
     """
-    Dispalys and editable form for the user, accepting a post request.
+    Dispalys and editable form for the user, accepting a post request if the form has a slug.
+    If no slug, creates a new to-do list.
     """
     if slug:
         todo_list = get_object_or_404(To_Do_List, slug=slug, author=request.user)
         form = ToDoListForm(request.POST or None, instance=todo_list)
+        template_name = 'to_do/edit_list.html'
 
     else:
         form = ToDoListForm(request.POST or None)
-        
-        return render(request, 'to_do/new_list.html', {'form': form})
+        template_name = 'to_do/new_list.html'
 
     if form.is_valid():
         to_do_list = form.save(commit=False)
         to_do_list.author = request.user
         to_do_list.save()
         return redirect('profile')
-    
-    return render(request, 'to_do/edit_list.html', {'form': form})
+
+    return render(request, template_name, {'form': form})
 
 
 @login_required
