@@ -1,6 +1,18 @@
+/* ----------------------------------------------------- General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     background-color: #2B2D42;
-    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /* display: block;
+    overflow: auto; */
 }
 
 .flexbox {
@@ -8,15 +20,17 @@ main {
     flex-wrap: wrap;
 }
 
+
+/* ----------------------------------------------------- Colour Palette */
 .bgColour {
     color: #2B2D42;
 }
 
-.primAccent {
+.primaryAccent {
     color: #8D8741;
 }
 
-.secAccent {
+.secondaryAccent {
     color: #D9BF77;
 }
 
@@ -24,12 +38,12 @@ main {
     color: #EAEAEA;
 }
 
-.textSec {
+.textSecondary {
     color: #FFFFFF;
 }
 
 .highlightError {
-    color: #FF5E57
+    color: #FF5E57;
 }
 
 .hightlightSuccess {
@@ -38,4 +52,82 @@ main {
 
 .borderColour {
     color: #404E4D;
+}
+
+
+/* ----------------------------------------------------- NavBar */
+.navbar {
+    background-color: #8D8741;
+}
+
+.navbar-toggler {
+    border-color: #EAEAEA;
+}
+
+
+/* ----------------------------------------------------- Task List Cards */
+.card-body {
+    color: #EAEAEA;
+    background-color: #404E4D;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.cardTextContainer {
+    overflow-y: auto;
+}
+
+
+/* ----------------------------------------------------- Footer */
+.footerContainer {
+    background-color: #8D8741;
+    margin-top: auto;
+}
+
+
+/* ----------------------------------------------------- Login/Logout/Signup Styles */
+label {
+    color: #EAEAEA;
+}
+
+.loginButton {
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: #81B29A;;
+}
+
+.logoutButton {
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: #FF5E57;
+}
+
+.loginButton:hover, .logoutButton:hover {
+    color: #81B29A;
+    border-color: #8D8741;
+}
+
+.authContainer {
+    align-content: center;
+}
+
+form ul {
+    color: #EAEAEA;
+}
+
+
+/* ----------------------------------------------------- Edit List Form */
+.editListForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
