@@ -41,8 +41,11 @@ def edit_list(request, slug=None):
     if slug:
         todo_list = get_object_or_404(To_Do_List, slug=slug, author=request.user)
         form = ToDoListForm(request.POST or None, instance=todo_list)
+
     else:
         form = ToDoListForm(request.POST or None)
+        
+        return render(request, 'to_do/new_list.html', {'form': form})
 
     if form.is_valid():
         to_do_list = form.save(commit=False)
