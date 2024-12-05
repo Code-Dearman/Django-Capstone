@@ -25,7 +25,11 @@
                     <div class="card mb-4">
                         <div class="card-body">
 
-                            <h2 class="card-title">{{ task.list_title }}</h2>
+                            <h2 class="card-title"><span
+                                    class="{% if task.complete %} highlightSuccess {% else %} highlightError {% endif %}">
+                                    {% if task.complete %} <i class="fa-solid fa-check"></i>
+                                    {% else %} <i class="fa-solid fa-list"></i> {% endif %}</span>{{ task.list_title }}
+                            </h2>
                             <p class="card-text">{{ task.author }}</p>
 
                             <hr>
