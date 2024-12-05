@@ -13,39 +13,41 @@
             <a href="{% url 'edit_list' slug=task.slug %}">Edit</a>
             <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ task.slug }}">Delete</a>
         </li>
+
+        <!-- Modal for delete list confirmation -->
+        <div class="modal fade" id="deleteModal-{{ task.slug }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel-{{ task.slug }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" id="deleteModalLabel-{{ task.slug }}">
+                            Confimation...
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p class="textMain">Are you sure you want to delete the list: "{{ task.list_title }}"?</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <form method="post" action="{% url 'delete_list' slug=task.slug %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Yes!</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         {% empty %}
+        <P>You have no to-do lists yet, why not start now?</P>
         {% endfor %}
     </ul>
 </div>
 
-<!-- Modal for delete list confirmation -->
- {% if list.slug %}
-<div class="modal fade" id="dleteModal={{ list.slug }}" tabindex="-1" aria-labelledby="deleteModalLabel-{{ task.slug }}"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
 
-            <div class="modal-header">
-                <h5 class="modal-title">
-                    Confimation...
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
 
-            <div class="modal-body">
-                <p class="textMain">Are you sure you want to delete the list "{{ list.list_title }}"?</p>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <form method="post" action="{% url 'delete_list' slug=task.slug %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Yes!</button>
-                </form>
-            </div>
-
-        </div>
-    </div>
-</div>
-{% endif %}
 {% endblock %}
