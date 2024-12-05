@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .forms import ToDoListForm
 from .models import To_Do_List
 
@@ -43,15 +44,18 @@ def edit_list(request, slug=None):
         todo_list = get_object_or_404(To_Do_List, slug=slug, author=request.user)
         form = ToDoListForm(request.POST or None, instance=todo_list)
         template_name = 'to_do/edit_list.html'
+        action = "updated"
 
     else:
         form = ToDoListForm(request.POST or None)
         template_name = 'to_do/new_list.html'
+        action = "created"
 
     if form.is_valid():
         to_do_list = form.save(commit=False)
         to_do_list.author = request.user
         to_do_list.save()
+        messages.success(request, f"Well done {request.user}, you just {action} a list!")
         return redirect('profile')
 
     return render(request, template_name, {'form': form})
@@ -66,6 +70,7 @@ def delete_list(request, slug):
 
     if request.method == "POST":
         to_do_list.delete()
+        messages.success(request, f"There it goes! Well done {request.user} you deleted a list!")
         return redirect('profile')
 
     return redirect('profile')
