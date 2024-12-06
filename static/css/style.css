@@ -131,3 +131,8 @@ form ul {
     justify-content: center;
     flex-direction: column;
 }
+
+/* ----------------------------------------------------- Modal */
+.modal-content {
+    background-color: #2B2D42;
+}

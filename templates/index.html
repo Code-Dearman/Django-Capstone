@@ -64,12 +64,11 @@
                             class="nav-link textMain {% if request.path == account_login %} active {% endif %}">Login</a>
                     </li>
                     {% endif %}
+                    </ul>
 
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    {% if user.is_authenticated %}
+                    <p class="nav-item textMain mt-2 text-end d-sm-none d-md-none d-lg-block">Hello {{ user }}</p>
+                    {% endif %}
             </div>
         </div>
     </nav>

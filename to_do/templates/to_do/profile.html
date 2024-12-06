@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>Your To-Do Lists</h2>
+    <h2 class="textMain">Your To-Do Lists</h2>
     <hr>
     <a href="{% url 'create_list' %}">New List</a>
     <ul>
         {% for task in user_lists %}
-        <li>
+        <li class="textMain">
             <strong>{{ task.list_title }}</strong>
-            (Created: {{ task.created_on|date:"M d, Y" }})
+            <p class="textSecondary">(Created: {{ task.created_on|date:"M d, Y" }})</p>
             <a href="{% url 'edit_list' slug=task.slug %}">Edit</a>
             <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ task.slug }}">Delete</a>
         </li>
@@ -18,7 +18,7 @@
         <div class="modal fade" id="deleteModal-{{ task.slug }}" tabindex="-1"
             aria-labelledby="deleteModalLabel-{{ task.slug }}" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content textMain">
 
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel" id="deleteModalLabel-{{ task.slug }}">
@@ -28,14 +28,14 @@
                     </div>
 
                     <div class="modal-body">
-                        <p class="textMain">Are you sure you want to delete the list: "{{ task.list_title }}"?</p>
+                        <p class="textMain text-center">Are you sure you want to delete the list: "{{ task.list_title }}"?</p>
                     </div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <form method="post" action="{% url 'delete_list' slug=task.slug %}">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-danger">Yes!</button>
+                            <button type="submit" class="btn btn-warning">Yes!</button>
                         </form>
                     </div>
 

@@ -10,9 +10,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
-    /* display: block;
-    overflow: auto; */
 }
 
 .flexbox {
@@ -133,7 +130,8 @@ form ul {
 }
 
 
-/* ----------------------------------------------------- Alerts */
-/* .alert  {
-    background-color: #2B2D42;
-} */
+/* ----------------------------------------------------- Modal */
+.modal-content {
+    color: #2B2D42;
+}
+
