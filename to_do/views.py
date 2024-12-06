@@ -55,7 +55,12 @@ def edit_list(request, slug=None):
         to_do_list = form.save(commit=False)
         to_do_list.author = request.user
         to_do_list.save()
-        messages.success(request, f"Well done {request.user}, you just {action} a list!")
+
+        if action == 'created':
+            messages.success(request, f"Well done {request.user}, you just {action} a new list! <br> If you have marked it as public it must be approved by an admin before it will be visable on the home page")
+        else:
+            messages.success(request, f"Well done {request.user}, you just {action} an existing list!")
+
         return redirect('profile')
 
     return render(request, template_name, {'form': form})
