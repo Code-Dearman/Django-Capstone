@@ -51,7 +51,7 @@ main {
 }
 
 .borderColour {
-    color: #404E4D;
+    color: #708090;
 }
 
 
@@ -67,8 +67,8 @@ main {
 
 /* ----------------------------------------------------- Task List Cards */
 .card-body {
-    color: #EAEAEA;
-    background-color: #404E4D;
+    color: #333333;
+    background-color: #708090;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -141,4 +141,10 @@ form ul {
 /* ----------------------------------------------------- Profile */
 .profileLists {
     list-style: none;
+}
+
+.skillIcon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
 }
