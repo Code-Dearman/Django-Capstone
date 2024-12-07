@@ -39,7 +39,7 @@ main {
 }
 
 .textSecondary {
-    color: #FFFFFF;
+    color: #404040;
 }
 
 .highlightError {
@@ -88,7 +88,7 @@ main {
 
 /* ----------------------------------------------------- Footer */
 .footerContainer {
-    background-color: #8D8741;
+    background-color: #DAA520;
     margin-top: auto;
 }
 
@@ -135,4 +135,10 @@ form ul {
 /* ----------------------------------------------------- Modal */
 .modal-content {
     background-color: #2B2D42;
+}
+
+
+/* ----------------------------------------------------- Profile */
+.profileLists {
+    list-style: none;
 }
