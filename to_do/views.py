@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import ToDoListForm, CharacterForm
 from .models import To_Do_List, UserCharacter
+from .character_script import get_character_data
 
 # Create your views here.
 
@@ -19,19 +20,51 @@ class ToDoListView(generic.ListView):
     paginate_by = 6
 
 
-class ProfileView(LoginRequiredMixin, generic.ListView):
+class ProfileView(LoginRequiredMixin, generic.TemplateView):
     """
     Displays all personal to do lists created by a user.
     """
-    model = To_Do_List
+    # model = To_Do_List
     template_name = 'to_do/profile.html'
-    context_object_name = 'user_lists'
+    # context_object_name = 'user_lists'
 
-    def get_queryset(self):
-        """
-        Returns only lists which match the current logged in user.
-        """
-        return To_Do_List.objects.filter(author=self.request.user)
+    # def get_queryset(self):
+    #     """
+    #     Returns only lists which match the current logged in user.
+    #     """
+    #     return To_Do_List.objects.filter(author=self.request.user)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_character = UserCharacter.objects.filter(user=self.request.user).first()
+        form = CharacterForm()
+
+        # If the character doesn't exist, we include the form
+        if not user_character:
+            context['form'] = form
+        else:
+            context['user_character'] = user_character
+
+        # Get to-do lists for the logged-in user
+        context['user_lists'] = To_Do_List.objects.filter(author=self.request.user)
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = CharacterForm(request.POST)
+
+        if form.is_valid():
+            character_name = form.cleaned_data['character_name']
+            success = get_character_data(request.user, character_name)
+            if success:
+                return redirect('profile')
+            else:
+                form.add_error(None, f"Unable to find {character_name}, please try again.")
+
+        # If form isn't valid, just re-render with the errors
+        context = self.get_context_data(form=form)
+        return self.render_to_response(context)
+
 
     
 @login_required
@@ -81,29 +114,29 @@ def delete_list(request, slug):
     return redirect('profile')
 
 
-@login_required
-def character_view(request):
-    user_character = UserCharacter.objects.filter(user=request.user).first()
+# @login_required
+# def character_view(request):
+#     user_character = UserCharacter.objects.filter(user=request.user).first()
 
-    if request.method == ('POST'):
-        form = CharacterForm(request.POST)
-        if form.is_valid():
+#     if request.method == ('POST'):
+#         form = CharacterForm(request.POST)
+#         if form.is_valid():
 
-            # Use the fetch API function here
+#             # Use the fetch API function here
             
-            character_name = form.cleaned_data['character_name']
-            success = get_character_data(request.user, character_name)
-            if success:
-                return redirect('profile')
-            else:
-                form.add_error(None, f"Unable to find {character_name}, please try again.")
-    else:
-        form = CharacterForm()
+#             character_name = form.cleaned_data['character_name']
+#             success = get_character_data(request.user, character_name)
+#             if success:
+#                 return redirect('profile')
+#             else:
+#                 form.add_error(None, f"Unable to find {character_name}, please try again.")
+#     else:
+#         form = CharacterForm()
 
-    context = {
-        'user_character': user_character,
-        'form': form,
-    }
+#     context = {
+#         'user_character': user_character,
+#         'form': form,
+#     }
 
-    return render(request, 'to_do/partials/character_section.html', context)
+#     return render(request, 'to_do/partials/character_section.html', context)
 

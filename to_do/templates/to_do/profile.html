@@ -6,107 +6,38 @@
 
     <div class="col-sm-12 col-lg-3">
         <div class="container mt-5">
+
             <h2 class="textMain">Character Stats</h2>
             <hr>
 
             <div class="row">
 
                 <div class="character-section">
-                    {% if character %}
-                        <h3>Your RuneScape Character</h3>
-                        <p><strong>Name:</strong> {{ character.character_name }}</p>
-                        <p><strong>Last Updated:</strong> {{ character.last_updated|date:"M d, Y H:i" }}</p>
-                        <a href="{% url 'update_character' %}" class="btn btn-warning">Update Character</a>
+                    {% if user_character %}
+                    <h3>Your Character: {{ user_character.character_name }}</h3>
+
+                    <div class="skillsGrid">
+                        {% for skill in user_character.skills.all %}
+                        <div class="skill">
+                            <strong>{{ skill.name }}</strong>
+                            <br>
+                            Level: {{ skill.level }}
+                            <br>
+                            Experience: {{ skill.experience }}
+                        </div>
+                        {% endfor %}
+                    </div>
                     {% else %}
-                        <h3>Add Your RuneScape Character</h3>
-                        <form method="post">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" class="btn btn-primary mt-3">Save</button>
-                        </form>
+                    <h3>Add Your Runescape Character</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Save Character</button>
+                    </form>
                     {% endif %}
                 </div>
 
-
-
-
-                <!-- <div class="col-3 mx-2">
-                    <div class="skillBox d-flex justify-content-center">
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                    </div>
-                </div>
-                <div class="col-3 mx-2">
-                    <div class="skillBox d-flex justify-content-center">
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                    </div>
-                </div>
-                <div class="col-3 mx-2 d-flex flex-column">
-                    <div class="skillBox d-flex justify-content-center">
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                        <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
-                            class="skillIcon justify-self-end">
-                        <br>
-                        <span>Strength</span>
-                    </div>
-                </div> -->
             </div>
-
-            <!-- <ul class="profileLists">
-                <li><div class="col-3">
-                    Attack
-                </div></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Strength</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Defence</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Ranging</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Prayer</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Magic</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Runecrafting</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Construction</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Hitpoints</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-                <li><img src="{% static 'images/attack.svg' %}" alt="Attack skill icon" class="skillIcon"><span>Attack</span></li>
-            </ul> -->
-
         </div>
     </div>
 
