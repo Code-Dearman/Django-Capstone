@@ -1,6 +1,6 @@
 from django import forms
 from django_summernote.widgets import SummernoteWidget
-from .models import To_Do_List
+from .models import To_Do_List, UserCharacter
 
 
 class ToDoListForm(forms.ModelForm):
@@ -13,4 +13,9 @@ class ToDoListForm(forms.ModelForm):
     
     list_content = forms.CharField(widget=SummernoteWidget())
 
+
+class CharacterForm(forms.ModelForm):
+    class Meta:
+        model = UserCharacter
+        fields = ['character_name',]
 

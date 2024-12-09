@@ -37,3 +37,29 @@ class To_Do_List(models.Model):
                 counter += 1
             self.slug = unique_slug
         super().save(*args, **kwargs)
+
+
+class UserCharacter(models.Model):
+    """
+    Model which represents one Runscape character per user.
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="character")
+    character_name = models.CharField(max_length=50, unique=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.character_name
+    
+
+class Skills(models.Model):
+    """
+    Models which represents all skills related to a character.
+    """
+    user_character = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name="skills")
+    name = models.CharField(max_length=50)
+    level = models.IntegerField(default=1)
+    experience = models.BigIntegerField(default=0)
+    rank = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name} - Level: {self.level}"
