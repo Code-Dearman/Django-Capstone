@@ -3,8 +3,8 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import ToDoListForm
-from .models import To_Do_List
+from .forms import ToDoListForm, CharacterForm
+from .models import To_Do_List, UserCharacter
 
 # Create your views here.
 
@@ -79,4 +79,31 @@ def delete_list(request, slug):
         return redirect('profile')
 
     return redirect('profile')
+
+
+@login_required
+def character_view(request):
+    user_character = UserCharacter.objects.filter(user=request.user).first()
+
+    if request.method == ('POST'):
+        form = CharacterForm(request.POST)
+        if form.is_valid():
+
+            # Use the fetch API function here
+            
+            character_name = form.cleaned_data['character_name']
+            success = get_character_data(request.user, character_name)
+            if success:
+                return redirect('profile')
+            else:
+                form.add_error(None, f"Unable to find {character_name}, please try again.")
+    else:
+        form = CharacterForm()
+
+    context = {
+        'user_character': user_character,
+        'form': form,
+    }
+
+    return render(request, 'to_do/partials/character_section.html', context)
 

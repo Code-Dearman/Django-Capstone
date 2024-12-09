@@ -1,0 +1,24 @@
+{% if user_character %}
+
+<h3>Your Character: {{ user_character.character_name }}</h3>
+
+<div class="skillsGrid">
+    {% for skill in user_character.skills.all %}
+    <div class="skill">
+        <strong>{{ skill.name }}</strong>
+        <br>
+        Level: {{ skill.level }}
+        <br>
+        Experience: {{ skill.experience }}
+    </div>
+    {% endfor %}
+</div>
+
+{% else %}
+<h3>Add Your Runescape Character</h3>
+<form method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save Character</button>
+</form>
+{% endif %}

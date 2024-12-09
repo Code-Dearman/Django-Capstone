@@ -10,7 +10,27 @@
             <hr>
 
             <div class="row">
-                <div class="col-3 mx-2">
+
+                <div class="character-section">
+                    {% if character %}
+                        <h3>Your RuneScape Character</h3>
+                        <p><strong>Name:</strong> {{ character.character_name }}</p>
+                        <p><strong>Last Updated:</strong> {{ character.last_updated|date:"M d, Y H:i" }}</p>
+                        <a href="{% url 'update_character' %}" class="btn btn-warning">Update Character</a>
+                    {% else %}
+                        <h3>Add Your RuneScape Character</h3>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary mt-3">Save</button>
+                        </form>
+                    {% endif %}
+                </div>
+
+
+
+
+                <!-- <div class="col-3 mx-2">
                     <div class="skillBox d-flex justify-content-center">
                         <img src="{% static 'images/attack.svg' %}" alt="Attack skill icon"
                             class="skillIcon justify-self-end">
@@ -57,7 +77,7 @@
                         <br>
                         <span>Strength</span>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- <ul class="profileLists">

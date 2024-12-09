@@ -18,4 +18,7 @@ class CharacterForm(forms.ModelForm):
     class Meta:
         model = UserCharacter
         fields = ['character_name',]
+        widgets = {
+            'character_name': forms.TextInput(attrs={'placeholder': 'Enter your RuneScape character name...'})
+        }
 
