@@ -22,17 +22,12 @@ class ToDoListView(generic.ListView):
 
 class ProfileView(LoginRequiredMixin, generic.TemplateView):
     """
-    Displays all personal to do lists created by a user.
+    Func1 - Displays all personal to do lists created by a user.
+    Func2 - Displays a form if the user doesn't have a character attatched to their 
+            user profile otherwise displays user_character.
     """
-    # model = To_Do_List
-    template_name = 'to_do/profile.html'
-    # context_object_name = 'user_lists'
 
-    # def get_queryset(self):
-    #     """
-    #     Returns only lists which match the current logged in user.
-    #     """
-    #     return To_Do_List.objects.filter(author=self.request.user)
+    template_name = 'to_do/profile.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -66,7 +61,6 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
         return self.render_to_response(context)
 
 
-    
 @login_required
 def edit_list(request, slug=None):
     """
@@ -112,31 +106,3 @@ def delete_list(request, slug):
         return redirect('profile')
 
     return redirect('profile')
-
-
-# @login_required
-# def character_view(request):
-#     user_character = UserCharacter.objects.filter(user=request.user).first()
-
-#     if request.method == ('POST'):
-#         form = CharacterForm(request.POST)
-#         if form.is_valid():
-
-#             # Use the fetch API function here
-            
-#             character_name = form.cleaned_data['character_name']
-#             success = get_character_data(request.user, character_name)
-#             if success:
-#                 return redirect('profile')
-#             else:
-#                 form.add_error(None, f"Unable to find {character_name}, please try again.")
-#     else:
-#         form = CharacterForm()
-
-#     context = {
-#         'user_character': user_character,
-#         'form': form,
-#     }
-
-#     return render(request, 'to_do/partials/character_section.html', context)
-
