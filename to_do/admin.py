@@ -11,6 +11,7 @@ class ToDoAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('list_title',)}
     summernote_fields = ('list_content',)
 
+
 @admin.register(UserCharacter)
 class UserCharacter(admin.ModelAdmin):
     list_display = ('user', 'character_name')
