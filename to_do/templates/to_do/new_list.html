@@ -7,7 +7,7 @@
 {% block content %}
 <div class="container mt-5">
     <h2 class="textMain text-center">Create a new to-do list!</h2>
-    <form method="post" class="editListForm">
+    <form method="post" class="editListForm myForms">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn textMain loginButton mt-3">Save</button>

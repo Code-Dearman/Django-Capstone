@@ -61,7 +61,6 @@ main {
     border-color: #EAEAEA;
 }
 
-
 /* ----------------------------------------------------- Task List Cards */
 .card-body {
     color: #EAEAEA;
@@ -117,7 +116,7 @@ label {
 }
 
 form ul {
-    color: #EAEAEA;
+    color: #333333;
 }
 
 

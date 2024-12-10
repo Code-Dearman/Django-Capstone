@@ -1,8 +1,12 @@
+/* ----------------------------------------------------- Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* ----------------------------------------------------- General Styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -10,9 +14,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
-    /* display: block;
-    overflow: auto; */
 }
 
 .flexbox {
@@ -35,7 +36,7 @@ main {
 }
 
 .textMain {
-    color: #333333;
+    color: #3B3B3BFC;
 }
 
 .textSecondary {
@@ -58,17 +59,26 @@ main {
 /* ----------------------------------------------------- NavBar */
 .navbar {
     background-color: #DAA520;
+    font-family: "Metamorphous", serif;
 }
 
 .navbar-toggler {
     border-color: #EAEAEA;
 }
 
+.navbar-brand {
+    font-weight: 800;
+}
+
+.navitem {
+    font-weight: 600;
+}
+
 
 /* ----------------------------------------------------- Task List Cards */
 .card-body {
     color: #333333;
-    background-color: #708090;
+    background-color: #CAD3D8;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -119,10 +129,6 @@ label {
     align-content: center;
 }
 
-form ul {
-    color: #EAEAEA;
-}
-
 
 /* ----------------------------------------------------- Edit List Form */
 .editListForm {
@@ -131,6 +137,13 @@ form ul {
     justify-content: center;
     flex-direction: column;
 }
+
+
+/* ----------------------------------------------------- Form Styles */
+.myForm >{
+    color: #333333;
+}
+
 
 /* ----------------------------------------------------- Modal */
 .modal-content {

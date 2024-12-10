@@ -34,13 +34,11 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
         user_character = UserCharacter.objects.filter(user=self.request.user).first()
         form = CharacterForm()
 
-        # If the character doesn't exist, we include the form
         if not user_character:
             context['form'] = form
         else:
             context['user_character'] = user_character
 
-        # Get to-do lists for the logged-in user
         context['user_lists'] = To_Do_List.objects.filter(author=self.request.user)
 
         return context
@@ -56,7 +54,6 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
             else:
                 form.add_error(None, f"Unable to find {character_name}, please try again.")
 
-        # If form isn't valid, just re-render with the errors
         context = self.get_context_data(form=form)
         return self.render_to_response(context)
 
