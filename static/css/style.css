@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    background-color: #E6D2B0;
+    background-color: #f8edd2;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -36,7 +36,7 @@ main {
 }
 
 .textMain {
-    color: #3B3B3BFC;
+    color: black;
 }
 
 .textSecondary {
@@ -68,27 +68,34 @@ main {
 
 .navbar-brand {
     font-weight: 800;
+    color: black;
+    font-size: 25px;
 }
 
 .navitem {
     font-weight: 600;
 }
 
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
 
 /* ----------------------------------------------------- Task List Cards */
 .card-body {
-    color: #333333;
-    background-color: #CAD3D8;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.card-body {
+    color: #000000;
+    background-color: #F2F0EF;
+    background-image: radial-gradient(#F2F0EF, #E6D2B0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 500px;
+    border: 2px solid #8B0000;
+    border-radius: 5px;
 }
 
 .cardTextContainer {
@@ -140,16 +147,15 @@ label {
 
 
 /* ----------------------------------------------------- Form Styles */
-.myForm >{
-    color: #333333;
+label {
+    color: #000000;
 }
 
 
 /* ----------------------------------------------------- Modal */
 .modal-content {
-    background-color: #2B2D42;
+    background-color: #F2F0EF;
 }
-
 
 /* ----------------------------------------------------- Profile */
 .profileLists {

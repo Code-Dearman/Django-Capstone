@@ -80,7 +80,7 @@
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                                 <form method="post" action="{% url 'delete_list' slug=task.slug %}">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn btn-warning">Yes!</button>
+                                    <button type="submit" class="btn btn-warning">Delete</button>
                                 </form>
                             </div>
 
