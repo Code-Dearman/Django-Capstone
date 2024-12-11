@@ -7,10 +7,14 @@
 {% if user.is_authenticated %}
 
 <h1 class="text-center textMain mt-4 mb-2">Welcome back, {{ user }}. Have a look around...</h1>
+<p class="text-center textMain mt -4 mb-2 mx-2 h3 subHeading">Check out what everyone else has been up to or head to your
+    profile to start making new lists.</p>
 
 {% else %}
 
 <h1 class="text-center textMain mt-4 mb-2">What is everyone up to?</h1>
+<p class="text-center textMain mt -4 mb-2 mx-2 h3 subHeading">Here you can view publicly available lists. <br> Signup
+    and navigate to your profile to start creating your own RuneScape to-do lists!</p>
 
 {% endif %}
 
