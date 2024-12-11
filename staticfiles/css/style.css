@@ -1,12 +1,16 @@
+/* ----------------------------------------------------- Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* ----------------------------------------------------- General Styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
-    background-color: #2B2D42;
+    background-color: #f8edd2;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -17,10 +21,14 @@ main {
     flex-wrap: wrap;
 }
 
+h1, h2, h3 {
+    font-family: "Metamorphous", serif;
+}
+
 
 /* ----------------------------------------------------- Colour Palette */
 .bgColour {
-    color: #2B2D42;
+    color: #E6D2B0;
 }
 
 .primaryAccent {
@@ -32,11 +40,11 @@ main {
 }
 
 .textMain {
-    color: #EAEAEA;
+    color: #000000;
 }
 
 .textSecondary {
-    color: #FFFFFF;
+    color: #404040;
 }
 
 .highlightError {
@@ -48,43 +56,64 @@ main {
 }
 
 .borderColour {
-    color: #404E4D;
+    color: #708090;
 }
 
 
 /* ----------------------------------------------------- NavBar */
 .navbar {
-    background-color: #8D8741;
+    background-color: #DAA520;
+    font-family: "Metamorphous", serif;
 }
 
 .navbar-toggler {
     border-color: #EAEAEA;
 }
 
-/* ----------------------------------------------------- Task List Cards */
-.card-body {
-    color: #EAEAEA;
-    background-color: #404E4D;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.navbar-brand {
+    font-weight: 800;
+    color: black;
+    font-size: 25px;
 }
 
+.navitem {
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+
+/* ----------------------------------------------------- Task List Cards */
 .card-body {
+    color: #000000;
+    background-color: #F2F0EF;
+    background-image: radial-gradient(#F2F0EF, #E6D2B0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 500px;
+    border: 2px solid #8B0000;
+    border-radius: 5px;
 }
 
 .cardTextContainer {
     overflow-y: auto;
 }
 
+.successBorder {
+    border-color: #2D6A4F;
+}
+
 
 /* ----------------------------------------------------- Footer */
 .footerContainer {
-    background-color: #8D8741;
+    background-color: #DAA520;
     margin-top: auto;
 }
 
@@ -97,26 +126,32 @@ label {
 .loginButton {
     border-radius: 2px;
     border-width: 2px;
-    border-color: #81B29A;;
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #2D6A4F;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .logoutButton {
     border-radius: 2px;
     border-width: 2px;
-    border-color: #FF5E57;
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #8B0000;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .loginButton:hover, .logoutButton:hover {
-    color: #81B29A;
-    border-color: #8D8741;
+    color: #000000;
+    border-color: #8B0000;
+    background-color: #FFFFFF;
+    /* transform: scale(1.1); */
 }
 
 .authContainer {
     align-content: center;
-}
-
-form ul {
-    color: #333333;
 }
 
 
@@ -126,11 +161,39 @@ form ul {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.note-editor {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* ----------------------------------------------------- Form Styles */
+label {
+    color: #000000;
 }
 
 
 /* ----------------------------------------------------- Modal */
 .modal-content {
-    color: #2B2D42;
+    background-color: #E6D2B0;
+}
+
+.modal-footer, .modal-header {
+    border-color: #8B0000;
+}
+
+
+/* ----------------------------------------------------- Profile */
+.profileLists {
+    list-style: none;
+}
+
+.skillIcon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
 }
 
