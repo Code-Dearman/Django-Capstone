@@ -42,10 +42,9 @@
     <!-- Current list container -->
     <div class="col-sm-12 col-lg-3">
         <div class="container mt-5">
-                <h2 class="textMain">Current Lists</h2>
-                <a href="{% url 'create_list' %}"><button class="btn loginButton mx-2">Create New List</button></a>
+            <h2 class="textMain">Current Lists</h2>
+            <a href="{% url 'create_list' %}"><button class="btn loginButton mx-2">Create New List</button></a>
             <hr>
-            <a href="{% url 'create_list' %}" class="mb-5">New List</a>
             <ul class="profileLists">
 
                 {% for task in user_lists %}
