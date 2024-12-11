@@ -13,6 +13,9 @@
                 <div class="character-section">
                     {% if user_character %}
                     <h3 class="text-center mb-4">{{ user_character.character_name }}</h3>
+                    <button class="btn loginButton d-lg-none mx-auto my-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#skillsSection" aria-expanded="true" aria-controls="skillsSection"><i
+                            class="fa-regular fa-square-caret-down mx-4"></i></button>
                     <div class="skillsGrid mb-4" id="skillsSection">
                         {% for skill in user_character.skills.all %}
                         <div class="skill">
@@ -23,6 +26,7 @@
                             <p>Exp: {{ skill.experience }}</p>
                         </div>
                         {% endfor %}
+
                     </div>
                     {% else %}
                     <h3>Add Your Runescape Character</h3>
@@ -34,9 +38,7 @@
                     {% endif %}
                 </div>
 
-                <button class="btn loginButton d-lg-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#skillsSection" aria-expanded="false" aria-controls="skillsSection"><i
-                        class="fa-regular fa-square-caret-down mx-2"></i></button>
+
 
             </div>
         </div>
