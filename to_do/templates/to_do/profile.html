@@ -109,7 +109,39 @@
                     <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ task.slug }}">Delete</a>
                 </li>
 
+                <div class="modal fade" id="deleteModal-{{ task.slug }}" tabindex="-1"
+                    aria-labelledby="deleteModalLabel-{{ task.slug }}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content textMain">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel" id="deleteModalLabel-{{ task.slug }}">
+                                    Confimation...
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p class="textMain text-center">Are you sure you want to delete the list:
+                                    "{{ task.list_title }}"?</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn loginButton" data-bs-dismiss="modal">Cancel</button>
+                                <form method="post" action="{% url 'delete_list' slug=task.slug %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn logoutButton">Delete</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
                 {% endif %}
+                {% empty %}
+                <p>You have no complete lists. Better get working!</p>
                 {% endfor %}
 
             </ul>
