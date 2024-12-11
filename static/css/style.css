@@ -178,6 +178,7 @@ label {
 /* ----------------------------------------------------- Modal */
 .modal-content {
     background-color: #E6D2B0;
+    width: 100%;
 }
 
 .modal-footer, .modal-header {

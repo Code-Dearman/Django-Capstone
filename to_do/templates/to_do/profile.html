@@ -12,10 +12,12 @@
             <div class="row">
                 <div class="character-section">
                     {% if user_character %}
-                    <h3 class="text-center mb-4">{{ user_character.character_name }}</h3>
-                    <button class="btn loginButton d-lg-none mx-auto my-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#skillsSection" aria-expanded="true" aria-controls="skillsSection"><i
-                            class="fa-regular fa-square-caret-down mx-4"></i></button>
+                    <div class="text-center">
+                        <h3 class="text-center mb-4">{{ user_character.character_name }}</h3>
+                        <button class="btn loginButton d-lg-none mx-auto my-1" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#skillsSection" aria-expanded="true" aria-controls="skillsSection"><i
+                                class="fa-regular fa-square-caret-down mx-4"></i></button>
+                    </div>
                     <div class="skillsGrid mb-4" id="skillsSection">
                         {% for skill in user_character.skills.all %}
                         <div class="skill">
@@ -37,9 +39,6 @@
                     </form>
                     {% endif %}
                 </div>
-
-
-
             </div>
         </div>
     </div>
@@ -48,8 +47,11 @@
     <div class="col-sm-12 col-lg-3">
         <div class="container mt-5">
             <h2 class="textMain">Current Lists</h2>
-            <a href="{% url 'create_list' %}"><button class="btn loginButton mx-2">Create New List</button></a>
+
             <hr>
+            <div class="text-center my-3">
+                <a href="{% url 'create_list' %}"><button class="btn loginButton mx-2">Create New List</button></a>
+            </div>
             <ul class="profileLists">
 
                 {% for task in user_lists %}
