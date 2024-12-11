@@ -50,9 +50,10 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
             character_name = form.cleaned_data['character_name']
             success = get_character_data(request.user, character_name)
             if success:
+                messages.success(request, f"Character: '{character_name}' added successfully!")
                 return redirect('profile')
             else:
-                form.add_error(None, f"Unable to find {character_name}, please try again.")
+                messages.error(request, f"Unable to find {character_name}. Please try again.")
 
         context = self.get_context_data(form=form)
         return self.render_to_response(context)
