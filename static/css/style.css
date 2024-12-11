@@ -21,6 +21,10 @@ main {
     flex-wrap: wrap;
 }
 
+h1, h2, h3 {
+    font-family: "Metamorphous", serif;
+}
+
 
 /* ----------------------------------------------------- Colour Palette */
 .bgColour {
@@ -36,7 +40,7 @@ main {
 }
 
 .textMain {
-    color: black;
+    color: #000000;
 }
 
 .textSecondary {
@@ -102,6 +106,10 @@ main {
     overflow-y: auto;
 }
 
+.successBorder {
+    border-color: #2D6A4F;
+}
+
 
 /* ----------------------------------------------------- Footer */
 .footerContainer {
@@ -118,18 +126,28 @@ label {
 .loginButton {
     border-radius: 2px;
     border-width: 2px;
-    border-color: #81B29A;;
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #2D6A4F;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .logoutButton {
     border-radius: 2px;
     border-width: 2px;
-    border-color: #FF5E57;
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #8B0000;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .loginButton:hover, .logoutButton:hover {
-    color: #81B29A;
-    border-color: #8D8741;
+    color: #000000;
+    border-color: #8B0000;
+    background-color: #FFFFFF;
+    /* transform: scale(1.1); */
 }
 
 .authContainer {
@@ -143,6 +161,12 @@ label {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.note-editor {
+    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -154,8 +178,13 @@ label {
 
 /* ----------------------------------------------------- Modal */
 .modal-content {
-    background-color: #F2F0EF;
+    background-color: #E6D2B0;
 }
+
+.modal-footer, .modal-header {
+    border-color: #8B0000;
+}
+
 
 /* ----------------------------------------------------- Profile */
 .profileLists {
@@ -167,3 +196,4 @@ label {
     width: 25px;
     margin-right: 5px;
 }
+

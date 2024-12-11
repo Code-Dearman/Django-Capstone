@@ -23,7 +23,7 @@
                 {% for task in object_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body">
+                        <div class="card-body {% if task.complete %} successBorder {% endif %} ">
 
                             <h2 class="card-title"><span
                                     class="{% if task.complete %} highlightSuccess {% else %} highlightError {% endif %}">

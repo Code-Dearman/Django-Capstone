@@ -4,14 +4,12 @@
 {% block content %}
 <div class="row d-flex justify-content-around">
 
+    <!-- Character stats container -->
     <div class="col-sm-12 col-lg-3">
         <div class="container mt-5">
-
             <h2 class="textMain">Character Stats</h2>
             <hr>
-
             <div class="row">
-
                 <div class="character-section">
                     {% if user_character %}
                     <h3>Your Character: {{ user_character.character_name }}</h3>
@@ -41,9 +39,11 @@
         </div>
     </div>
 
+    <!-- Current list container -->
     <div class="col-sm-12 col-lg-3">
         <div class="container mt-5">
-            <h2 class="textMain">Current Lists</h2>
+                <h2 class="textMain">Current Lists</h2>
+                <a href="{% url 'create_list' %}"><button class="btn loginButton mx-2">Create New List</button></a>
             <hr>
             <a href="{% url 'create_list' %}" class="mb-5">New List</a>
             <ul class="profileLists">
@@ -60,7 +60,7 @@
                 <!-- Modal for delete list confirmation -->
                 <div class="modal fade" id="deleteModal-{{ task.slug }}" tabindex="-1"
                     aria-labelledby="deleteModalLabel-{{ task.slug }}" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content textMain">
 
                             <div class="modal-header">
@@ -77,10 +77,10 @@
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn loginButton" data-bs-dismiss="modal">Cancel</button>
                                 <form method="post" action="{% url 'delete_list' slug=task.slug %}">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn btn-warning">Delete</button>
+                                    <button type="submit" class="btn logoutButton">Delete</button>
                                 </form>
                             </div>
 
