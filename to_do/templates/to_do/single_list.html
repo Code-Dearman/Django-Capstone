@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="singleListHeader">
-    <h2 class="text-center mt-5">You are viewing {{ to_do_list.author }}'s list</h2>
+    <h2 class="text-center my-5">You are viewing {{ to_do_list.author }}'s list</h2>
 </div>
 
 <div class="container d-flex justify-content-around align-items-center m-auto">
@@ -28,10 +28,6 @@
 </div>
 
 <div class="container d-flex justify-content-center align-items-center">
-    <a href="{% url 'home' %}"><button class="btn loginButton mb-5">Take me Home!</button></a>
+    <a href="{% url 'home' %}"><button class="btn loginButton my-5">Take me Home!</button></a>
 </div>
-
-
-
-
 {% endblock %}
