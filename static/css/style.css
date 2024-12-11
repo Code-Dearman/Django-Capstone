@@ -110,6 +110,11 @@ h1, h2, h3 {
     border-color: #2D6A4F;
 }
 
+.singleListLink {
+    text-decoration: underline;
+    color: #000000;
+}
+
 
 /* ----------------------------------------------------- Footer */
 .footerContainer {

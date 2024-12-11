@@ -58,6 +58,21 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
         return self.render_to_response(context)
 
 
+def single_list_view(request, slug):
+    """
+    View to display a single to to-do list.
+    """
+
+    queryset = To_Do_List.objects.all()
+    to_do_list = get_object_or_404(queryset, slug=slug)
+
+    context = {
+        'to_do_list': to_do_list,
+    }
+
+    return render(request, 'to_do/single_list.html', context)
+
+
 @login_required
 def edit_list(request, slug=None):
     """

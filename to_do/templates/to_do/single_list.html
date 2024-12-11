@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-around align-items-center m-auto">
+    <div class="card">
+        <div class="card-body {% if to_do_list.complete %} successBorder {% endif %} ">
+            <h2 class="card-title"><span
+                    class="{% if to_do_list.complete %} highlightSuccess {% else %} highlightError {% endif %}">
+                    {% if to_do_list.complete %} <i class="fa-solid fa-check"></i>
+                    {% else %} <i class="fa-solid fa-list"></i> {% endif %}</span>{{ to_do_list.list_title }}
+            </h2>
+            <p class="card-text">{{ to_do_list.author }}</p>
+            <hr>
+            <div class="cardTextContainer">
+                <p class="card-text">
+                    {{ to_do_list.list_content | safe }}
+                </p>
+            </div>
+            <hr>
+            <p class="card-text h6">Task created: {{ to_do_list.created_on}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

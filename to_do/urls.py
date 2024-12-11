@@ -9,4 +9,5 @@ urlpatterns = [
     path('list/new/', views.edit_list, name='create_list'),
     path('edit/<slug:slug>/', views.edit_list, name='edit_list'),
     path('delete/<slug:slug>/', views.delete_list, name='delete_list'),
+    path('list/<slug:slug>/', views.single_list_view, name='single_list'),
 ]

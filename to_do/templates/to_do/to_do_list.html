@@ -22,14 +22,17 @@
             <div class="row">
                 {% for task in object_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card mb-4 singleCard">
                         <div class="card-body {% if task.complete %} successBorder {% endif %} ">
 
-                            <h2 class="card-title"><span
-                                    class="{% if task.complete %} highlightSuccess {% else %} highlightError {% endif %}">
-                                    {% if task.complete %} <i class="fa-solid fa-check"></i>
-                                    {% else %} <i class="fa-solid fa-list"></i> {% endif %}</span>{{ task.list_title }}
-                            </h2>
+                            <a href="{% url 'single_list' task.slug %}" class="singleListLink">
+                                <h2 class="card-title"><span
+                                        class="{% if task.complete %} highlightSuccess {% else %} highlightError {% endif %}">
+                                        {% if task.complete %} <i class="fa-solid fa-check"></i>
+                                        {% else %} <i class="fa-solid fa-list"></i>
+                                        {% endif %}</span>{{ task.list_title }}
+                                </h2>
+                            </a>
                             <p class="card-text">{{ task.author }}</p>
 
                             <hr>

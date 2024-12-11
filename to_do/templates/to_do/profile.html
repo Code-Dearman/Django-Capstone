@@ -57,7 +57,8 @@
                 {% for task in user_lists %}
                 {% if not task.complete %}
                 <li class="textMain pb-5">
-                    <strong><i class="fa-solid fa-list mx-2"></i>{{ task.list_title }}</strong>
+                    <a href="{% url 'single_list' task.slug %}" class="singleListLink"><strong><i
+                                class="fa-solid fa-list mx-2"></i>{{ task.list_title }}</strong></a>
                     <p class="textSecondary mx-4">- Created: {{ task.created_on|date:"M d, Y" }}</p>
                     <a href="{% url 'edit_list' slug=task.slug %}">Edit</a>
                     <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ task.slug }}">Delete</a>
@@ -110,7 +111,7 @@
                 {% for task in user_lists %}
                 {% if task.complete %}
                 <li class="textMain pb-5">
-                    <strong><i class="fa-solid fa-check mx-2"></i>{{ task.list_title }}</strong>
+                    <a href="{% url 'single_list' task.slug %}" class="singleListLink"><strong><i class="fa-solid fa-check mx-2"></i>{{ task.list_title }}</strong></a>
                     <p class="textSecondary mx-4">- Created: {{ task.created_on|date:"M d, Y" }}</p>
                     <a href="{% url 'edit_list' slug=task.slug %}">Edit</a>
                     <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ task.slug }}">Delete</a>
