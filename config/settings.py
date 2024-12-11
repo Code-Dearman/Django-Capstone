@@ -59,6 +59,12 @@ INSTALLED_APPS = [
     'to_do',
 ]
 
+SUMMERNOTE_CONFIG = {
+    'iframe': False,
+    'width': '100%',
+    'height': '400',
+}
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
