@@ -147,7 +147,6 @@ label {
     color: #000000;
     border-color: #8B0000;
     background-color: #FFFFFF;
-    /* transform: scale(1.1); */
 }
 
 .authContainer {
@@ -197,3 +196,26 @@ label {
     margin-right: 5px;
 }
 
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.skill {
+    border: 1px solid #DAA520;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.skill p {
+    margin: 2px 0;
+}
+
+.skill h6 {
+    margin-bottom: 5px;
+}
