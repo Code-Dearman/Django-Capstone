@@ -40,7 +40,6 @@ GitHub project board: [RuneTask Project](https://github.com/users/Code-Dearman/p
 10. [Deployment](#deployment)
     - [GitHub](#github)
     - [Django](#django)
-    - [Cloudinary](#cloudinary)
     - [PostgreSQL](#postgresql)
     - [Heroku](#heroku)
     - [Clone](#clone)
@@ -205,7 +204,7 @@ This last point was particulary importand for my project as I have a public area
 
 ## Features
 
-__Users can (click headings to expand images):__
+__Users (click headings to expand images):__
 
 <details>
 <summary>View public lists on the homepage</summary>
@@ -261,8 +260,9 @@ __Users can (click headings to expand images):__
 <IMG src="assets/readme_img/mark_complete.png" alt="mark complete example">
 </details>
 
+<br>
 
-__Superusers can (click headings to expand images):__
+__Superusers (click headings to expand images):__
 
 <details>
 <summary>View all lists</summary>
@@ -333,14 +333,14 @@ The frameworks used for this project were:
 
 Additional tools and programs used include:
 - [Wireframe.cc](https://wireframe.cc/) for wireframe creation.
-- [SmartDraw](https://www.smartdraw.com/) for ERD.
+- [SmartDraw](https://www.smartdraw.com/) for entity relationship diagram.
 - [chatGPT](https://chatgpt.com/) for general advice and insight on project planning, error checking code snippets and spell checking.
 - [FontAwesome](https://fontawesome.com/) for webpage icons.
 - [Googlefonts](https://fonts.google.com/) for fonts.
 - [GitHub](https://github.com/) for storing repository.
 - [Favicon.io](https://favicon.io/) for creating favicon.
 - Git for version control
-- Gitpod for writing and pushing code to repository.
+- Gitpod for writing code and pushing to repository.
 
 ## Testing
 
@@ -348,7 +348,7 @@ Additional tools and programs used include:
 
 The validation testing was done using the [W3C](https://www.w3.org/) website HTML and CSS validator.
 
-__HTML validation__
+__HTML Validation__
 
 The HTML validation was done on my deployed site. I cycled through all available pages, inputting the address into the validator and checking the results. This included, logged in and logged out users, list creation, list deletion, home page view and 
 
@@ -361,13 +361,24 @@ Error images (Click heading to expand)
 <IMG src="assets/readme_img/semantic_errors.png" alt="Error screenshot from W3C HTML validator">
 </details>
 
+<br>
+
 <details>
 <summary>Form errors and examples</summary>
 <IMG src="assets/readme_img/form_error.png" alt="Form error screenshot from W3C HTML validator">
 <IMG src="assets/readme_img/form_error2.png" alt="Form error screenshot from W3C HTML validator #2">
 </details>
 
-_add images of complete validation testing_
+<br>
+
+__CSS Validation__
+
+The CSS validation was also done using the W3C validator. Fortunately I only used a single style sheet for my project and it presented no errors when I ran it through the validator. 
+
+<details>
+<summary>Validator image</summary>
+<IMG src="assets/readme_img/success_css.png" alt="Successful CSS validation">
+</details>
 
 ### User Testing
 
@@ -396,10 +407,6 @@ This project was created on the Gitpod CDE and Git was used for version control.
 ### Django
 
 Django was essential to the deployment process as it works seemlessly with Heroku. Adding allowed hosts in config/settings.py means that you can choose what hosts are allowed for the website. 
-
-### Cloudinary
-
-_Add cloudinary info later_
 
 ### PostgreSQL
 
