@@ -69,12 +69,11 @@
             {% endif %}
 
             <li>
-                <span class="current">
+                <div class="current">
                     <p class="textMain text-center">
                         Page {{ page_obj.number }} of {{ paginator.num_pages }}
                     </p>
-                </span>
-
+                </div>
             </li>
 
             {% if page_obj.has_next %}

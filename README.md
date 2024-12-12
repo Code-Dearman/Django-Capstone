@@ -294,7 +294,9 @@ There were a variety of features that I thought of at the beginning of the proje
 
 - Adding a unique image for each skill in the database so the skills grid looks more appealing.
 
-- Creating a character refresh button on the character area of the profile so recent changes can be shown (Note: This was halfway incorporated in the UserCharacter model. The last_updated field was going to be used to check and refresh character skills.)
+- Further integration of the RuneScape Hiscores API. This API offers even more information which can be included in a character profile such as boss kills, clue scroll completions and minigames. 
+
+- Creating a character refresh button in the profile page so recent changes can be shown (Note: This was halfway incorporated in the UserCharacter model. The last_updated field was going to be used to check and refresh character skills.)
 
 ```
 class UserCharacter(models.Model):
@@ -307,12 +309,7 @@ class UserCharacter(models.Model):
 
     def __str__(self):
         return self.character_name
-```
-- Further integration of the RuneScape Hiscores API. This API offers even more information which can be included in a character profile such as boss kills, clue scroll completions and minigames. 
-
-- 
-
-_Add more future features_
+``` 
 
 ## Technology and Languges
 
@@ -333,14 +330,15 @@ The frameworks used for this project were:
 ### Tools and Programs
 
 Additional tools and programs used include:
-- [Wireframe.cc](https://wireframe.cc/) for wireframe creation
-- [SmartDraw](https://www.smartdraw.com/) for ERD
+- [Wireframe.cc](https://wireframe.cc/) for wireframe creation.
+- [SmartDraw](https://www.smartdraw.com/) for ERD.
 - [chatGPT](https://chatgpt.com/) for general advice and insight on project planning, error checking code snippets and spell checking.
-- [FontAwesome](https://fontawesome.com/) for webpage icons
-- [Googlefonts](https://fonts.google.com/) for fonts
-- [GitHub](https://github.com/) for storing repository
+- [FontAwesome](https://fontawesome.com/) for webpage icons.
+- [Googlefonts](https://fonts.google.com/) for fonts.
+- [GitHub](https://github.com/) for storing repository.
+- [Favicon.io](https://favicon.io/) for creating favicon.
 - Git for version control
-- Gitpod for writing and pushing code to repository. 
+- Gitpod for writing and pushing code to repository. qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 
 ## Testing
 
