@@ -93,6 +93,16 @@ Given that this website it aimed at RuneScape players I would suggest that these
 </details>
 <br>
 
+Throughout the development process I regularly checked by website again online constrast checkers in order to make sure that the text was readable which influenced a lot of my colour palette choices. Once I had a deployed project I check the website againt the Google Chrome Lighthouse program which informed me of some further accessibity issues with blue links, list elements in to-do lists and link names.
+
+<br>
+<details>
+<summary>Lighthouse ratings and issues (click to expand)</summary>
+<IMG src="assets/readme_img/lighthouse_issues.png" alt="lighthouse issues">
+<IMG src="assets/readme_img/lighthouse_rating.png" alt="lighthouse rating">
+</details>
+<br>
+
 ### Colour Palette
 
 Given the oldschool, medieval and MMO related nature of the app I chose earth tones and gold accents for my app. I chose black the text to maintain readability for users. I asked Claude AI to generate additional colours which suited the palette for positive and negative buttons.
@@ -103,10 +113,6 @@ Given the oldschool, medieval and MMO related nature of the app I chose earth to
 <IMG src="assets/readme_img/color_palette.png" alt="colour palette example">
 </details>
 <br>
-
-Throughout the development process I regularly checked by website again online constrast checkers in order to make sure that the text was readable. 
-
-
 
 ### Fonts
 

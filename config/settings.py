@@ -86,6 +86,8 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
