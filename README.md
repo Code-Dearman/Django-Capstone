@@ -2,7 +2,7 @@
 
 RuneTask is a simple, users-friendly to-do list web app built with Django. Users can create, manage and track their goals with the option to link their current runescape character details in order to keep track of their goals. This project was created as part of my Code Institute 16 week bootcamp course. The aim is to use the Django framework to create a full-stack project which is hosted on Heroku. There must be a custom database table and the app must provide CRUD functionality.
 
-_img of display on multiple devices_
+![Header Image](assets/readme_img/header_image.png)
 
 Live site: [RuneTask](https://rune-task-6f978e78a585.herokuapp.com/)
 
@@ -39,7 +39,6 @@ GitHub project board: [RuneTask Project](https://github.com/users/Code-Dearman/p
 10. [Deployment](#deployment)
     - [GitHub](#github)
     - [Django](#django)
-    - [PostgreSQL](#postgresql)
     - [Heroku](#heroku)
     - [Clone](#clone)
     - [Fork](#fork)
@@ -380,7 +379,7 @@ The frameworks used for this project were:
 Additional tools and programs used include:
 - [Wireframe.cc](https://wireframe.cc/) for wireframe creation.
 - [SmartDraw](https://www.smartdraw.com/) for entity relationship diagram.
-- [chatGPT](https://chatgpt.com/) for general advice and insight on project planning, error checking code snippets and spell checking.
+- [chatGPT](https://chatgpt.com/) and [Claude AI](https://claude.ai) for general advice and insight on project planning, error checking code snippets and spell checking.
 - [FontAwesome](https://fontawesome.com/) for webpage icons.
 - [Googlefonts](https://fonts.google.com/) for fonts.
 - [GitHub](https://github.com/) for storing repository.
@@ -393,6 +392,12 @@ Additional tools and programs used include:
 ### Validation Testing
 
 The validation testing was done using the [W3C](https://www.w3.org/) website HTML and CSS validator.
+
+__Lighthouse Testing__
+
+I touched on lighthouse testing earlier in my readme. By the end of my project I was showing positive results on my webpage
+
+![Lighthouse Results](assets/readme_img/good_lighthouse.png)
 
 __HTML Validation__
 
@@ -429,12 +434,18 @@ The CSS validation was also done using the W3C validator. Fortunately I only use
 ### User Testing
 
 Manual user testing was done by me. I made sure that I could access and perform all the neccessary features, both as user and superuser. This included:
-- Making to-do lists (as user and superuser)
-- Deleting to-do lists (as user and superuser)
-- Requesting lists be made public (as user)
-- Approving lists (as superuser)
-- Linking runescape characters (as user)
-- Creating new accounts (as user)
+- Making to-do lists (as user and superuser) - PASSED
+- Deleting to-do lists (as user and superuser) - PASSED
+- Requesting lists be made public (as user) - PASSED 
+- Approving lists (as superuser) - PASSED 
+- Linking runescape characters (as user) - PASSED
+- Creating new accounts (as user) - PASSED
+- Log in in to accounts (as user - PASSED)
+- Viewing individual lists (as user) - PASSED
+
+### Python linter testing
+
+
 
 **Browser Compatablity**: The website was tested Firefox and Chrome for desktop view and Safari and Firefox for mobile view.
 
@@ -450,10 +461,6 @@ This project was created on the Gitpod CDE and Git was used for version control.
 
 Django was essential to the deployment process as it works seemlessly with Heroku. Adding allowed hosts in config/settings.py means that you can choose what hosts are allowed for the website. 
 
-### PostgreSQL
-
-_add later_
-
 ### Heroku
 
 Deploying on Heroku was done with these steps.
@@ -466,11 +473,33 @@ Deploying on Heroku was done with these steps.
 
 ### Clone 
 
+To clone a repository follow these steps
 
+- Go the respository page
+- Click _code_ above the list of files
+- copy repository URL
+- Open the Terminal in workspace
+- Make sure you are in the correct working directory for your project
+- Use command `git clone`
+- Press Enter key
 
 ### Fork
 
+To fork a respository follow these steps
 
+- Go to repository page
+- Click 'Fork' in the top right corner
+- Select an owner for the forked repository from the dropdown menu
 
 ## Credits
 
+- [Am I Responsive](https://ui.dev/amiresponsive) for responsive image examples.
+- [Wireframe.cc](https://wireframe.cc/) for wireframe creation.
+- [SmartDraw](https://www.smartdraw.com/) for entity relationship diagram.
+- [chatGPT](https://chatgpt.com/) and [Claude AI](https://claude.ai) for general advice and insight on project planning, error checking code snippets and spell checking.
+- [FontAwesome](https://fontawesome.com/) for webpage icons.
+- [Googlefonts](https://fonts.google.com/) for fonts.
+- [GitHub](https://github.com/) for storing repository.
+- [Favicon.io](https://favicon.io/) for creating favicon.
+- Git for version control
+- Gitpod for writing code and pushing to repository.
