@@ -60,7 +60,7 @@ When you've completed your task you can edit the task list and mark it as comple
 
 ### Accessibility and Responseiveness
 
-_Discuss the accessibility and responsiveness of the app._
+_Discuss the accessibility and responsiveness of the app and choices such as buttons and organisation._
 
 ### Colour Palette
 
