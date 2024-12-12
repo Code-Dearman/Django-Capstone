@@ -205,12 +205,41 @@ This last point was particulary importand for my project as I have a public area
 
 ## Features
 
-Users can:
-- View public lists on the homepage
-- Create an account
-- Login to their account
-- Create a new to-do list
-- View their to-do lists
+Users can (click headings to expand images):
+
+<details>
+<summary>View public lists on the homepage</summary>
+<IMG src="assets/readme_img/view_public_lists.png" alt="View lists example">
+</details>
+
+<details>
+<summary>Create an account</summary>
+<IMG src="assets/readme_img/account_create.png" alt="Create an account example">
+</details>
+
+<details>
+<summary>Login to their account</summary>
+<IMG src="assets/readme_img/login_account.png" alt="Account login example">
+</details>
+
+<details>
+<summary>Create a new to-do list</summary>
+<IMG src="assets/readme_img/new_list2.png" alt="second new list example">
+<IMG src="assets/readme_img/new_list.png" alt="new list example">
+</details>
+
+<details>
+<summary>View their to-do lists</summary>
+<IMG src="assets/readme_img/view_list.png" alt="view list example">
+<IMG src="assets/readme_img/view_list2.png" alt="second view list example">
+</details>
+
+<details>
+<summary>Request their list to be made public</summary>
+<IMG src="assets/readme_img/request_public_list.png" alt="Request public list example">
+<IMG src="assets/readme_img/request_public_list2.png" alt="Second request public list example">
+</details>
+
 - Request their list to be made public
 - Link their runescape character to their profile
 - Delete their to-do lists
