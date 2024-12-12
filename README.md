@@ -235,6 +235,12 @@ __Users can (click headings to expand images):__
 </details>
 
 <details>
+<summary>Edit their to-do lists</summary>
+<IMG src="assets/readme_img/edit_list.png" alt="edit list example">
+</details>
+
+
+<details>
 <summary>Request their list to be made public</summary>
 <IMG src="assets/readme_img/request_public_list2.png" alt="Second request public list example">
 <IMG src="assets/readme_img/request_public_list.png" alt="Request public list example">
@@ -260,23 +266,51 @@ __Superusers can (click headings to expand images):__
 
 <details>
 <summary>View all lists</summary>
-<IMG src="assets/readme_img/mark_complete.png" alt="admin view example">
+<IMG src="assets/readme_img/admin_view.png" alt="admin view example">
 </details>
 
 <details>
 <summary>Approve public list requests</summary>
-<IMG src="assets/readme_img/mark_complete.png" alt="admin approval example">
+<IMG src="assets/readme_img/admin_approval.png" alt="admin approval example">
 </details>
 
 <details>
 <summary>Create and delete lists</summary>
-<IMG src="assets/readme_img/mark_complete.png" alt="admin list delete example">
+<IMG src="assets/readme_img/admin_create_list.png" alt="admin list delete example">
 </details>
 
 
 ## Future Features
 
+There were a variety of features that I thought of at the beginning of the project and a couple that I thought of while it was in development. Unfortunely, I was not able to include them during this iteration but I have listed them here for future consideration.
+
 - The ability to incoporate player levels directly into the to-do list. Allowing the list to automatically mark as done when the desired level has been reached.
+
+- Personal images for user which would display on their profile page and next to their lists.
+
+- Add images directly into to-do lists in order for users to share screenshots of their achievements.
+
+- A system for notifying users when their public list requests have been approved. 
+
+- Adding a unique image for each skill in the database so the skills grid looks more appealing.
+
+- Creating a character refresh button on the character area of the profile so recent changes can be shown (Note: This was halfway incorporated in the UserCharacter model. The last_updated field was going to be used to check and refresh character skills.)
+
+```
+class UserCharacter(models.Model):
+    """
+    Model which represents one Runscape character per user.
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="character")
+    character_name = models.CharField(max_length=50, unique=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.character_name
+```
+- Further integration of the RuneScape Hiscores API. This API offers even more information which can be included in a character profile such as boss kills, clue scroll completions and minigames. 
+
+- 
 
 _Add more future features_
 
