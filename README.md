@@ -413,13 +413,11 @@ Error images (Click heading to expand)
 </details>
 
 <br>
-
 <details>
 <summary>Form errors and examples</summary>
 <IMG src="assets/readme_img/form_error.png" alt="Form error screenshot from W3C HTML validator">
 <IMG src="assets/readme_img/form_error2.png" alt="Form error screenshot from W3C HTML validator #2">
 </details>
-
 <br>
 
 __CSS Validation__
@@ -445,7 +443,14 @@ Manual user testing was done by me. I made sure that I could access and perform 
 
 ### Python linter testing
 
+Linter testing was done through the [pep8 linter](https://pep8ci.herokuapp.com/#)
 
+<br>
+<details>
+<summary>pep8</summary>
+<IMG src="assets/readme_img/pep8.png" alt="Form error screenshot from W3C HTML validator">
+</details>
+<br>
 
 **Browser Compatablity**: The website was tested Firefox and Chrome for desktop view and Safari and Firefox for mobile view.
 
