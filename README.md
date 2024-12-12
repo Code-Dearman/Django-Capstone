@@ -296,6 +296,8 @@ There were a variety of features that I thought of at the beginning of the proje
 
 - Further integration of the RuneScape Hiscores API. This API offers even more information which can be included in a character profile such as boss kills, clue scroll completions and minigames. 
 
+- Character deletion so that users can add a different character or correct a mistake.
+
 - Creating a character refresh button in the profile page so recent changes can be shown (Note: This was halfway incorporated in the UserCharacter model. The last_updated field was going to be used to check and refresh character skills.)
 
 ```
@@ -338,13 +340,32 @@ Additional tools and programs used include:
 - [GitHub](https://github.com/) for storing repository.
 - [Favicon.io](https://favicon.io/) for creating favicon.
 - Git for version control
-- Gitpod for writing and pushing code to repository. qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+- Gitpod for writing and pushing code to repository.
 
 ## Testing
 
 ### Validation Testing
 
 The validation testing was done using the [W3C](https://www.w3.org/) website HTML and CSS validator.
+
+__HTML validation__
+
+The HTML validation was done on my deployed site. I cycled through all available pages, inputting the address into the validator and checking the results. This included, logged in and logged out users, list creation, list deletion, home page view and 
+
+The HTML validation gave me a few errors. Some to do with semantic issues, such as wrapping *buttons* in *anchors* or putting *p* elements inside of a *span* element. Overall these issues were solved fairly quickly. However, there were lots of errors which were to do either with inserted forms which are maked as safe in the .html files or with the to-do lists themselves which are inserted from the database and also marked with safe. While I cant fix these errors I have noted them and did my best to ensure that they do not impact website. 
+
+Error images (Click heading to expand)
+
+<details>
+<summary>Semantic errors</summary>
+<IMG src="assets/readme_img/semantic_errors.png" alt="Error screenshot from W3C HTML validator">
+</details>
+
+<details>
+<summary>Form errors and examples</summary>
+<IMG src="assets/readme_img/form_error.png" alt="Form error screenshot from W3C HTML validator">
+<IMG src="assets/readme_img/form_error2.png" alt="Form error screenshot from W3C HTML validator #2">
+</details>
 
 _add images of complete validation testing_
 
