@@ -171,7 +171,7 @@ Acceptance criteria
 
 All of the user stories I created were sorted using the MoSCoW (Must have, Should Have, Could Have and Wont Have) prioritisation system. This system allowed me to organise my userstories, making sure that all the must haves formed my minimum viable product. Once those were completed I could advance towards including my Should and Could have user stories which would provide extra features for the user and lead to a more finished product. My wont have stories outlines features which were not in the scope of this development cycle but helped me to keep a focus on where the project is leading.
 
-_MoSCow examples images_
+![MoSCoW prioritisation labels](assets/readme_img/moscow_labels.png)
 
 ### Wiresframes
 
@@ -187,7 +187,15 @@ The wire framing for this project was done using the free trial of [wireframe.cc
 
 The entity relationship diagram for this project was created using [SmartDraw](https://www.smartdraw.com/)
 
+During the initial planning I believed that I would have a very simple database set up with only two tables which would be related in a one to many relationship. The individual user to their many to-do lists.
+
 ![RuneTask ERD](assets/readme_img/runetask_erd.png)
+
+Soon enough I realised I would need to include two more tables, one for each user character and another for the character skills. This was mainly due to the issues I can in applying the skills that I was receieving as a JSON response to each user. It became much more simple to create a skills table which related to each character and then relate each character to a user. 
+
+My entity relationships ended up looking more like this.
+
+![RuneTask complete ERD](assets/readme_img/updated_erd.png)
 
 ## Security
 
