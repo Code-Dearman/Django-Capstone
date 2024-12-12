@@ -4,11 +4,13 @@ RuneTask is a simple, users-friendly to-do list web app built with Django. Users
 
 _img of display on multiple devices_
 
-Live site: _link_
+Live site: [RuneTask](https://rune-task-6f978e78a585.herokuapp.com/)
 
-Admin access link: _link_
+Admin access link: [RuneTask Admin](https://rune-task-6f978e78a585.herokuapp.com/admin/login/?next=/admin/)
 
-GitHub repository: _link_
+GitHub repository: [GitHub RuneTask](https://github.com/Code-Dearman/Django-Capstone)
+
+GitHub project board: [RuneTask Project](https://github.com/users/Code-Dearman/projects/4/views/1)
 
 ## Table of Contents
 
@@ -53,9 +55,7 @@ Click the 'Sign Up' link in the navigation bar to create and account. Once this 
 
 For even greater functionality you can use the 'link character' button feature to safely use runescape's own Oldschool Hiscrores API to retrieve details about your character. Doing this allows your profile to display your current stats which you can incorporate into the task list. 
 
-If you feel like customising you profile feel free to choose from a range of provided profile images.
-
-When you've completed your task you can edit the task list and mark it as complete. Feel free to upload a screenshot of your success!
+When you've completed your task you can edit the task list and mark it as complete.
 
 ## UX - User Experience
 
@@ -65,15 +65,15 @@ _Discuss the accessibility and responsiveness of the app._
 
 ### Colour Palette
 
-Given the oldschool, medieval and MMO related nature of the app I chose mostly dark and earth tones for my app. I chose white and off white for the text to maintain readability for users. I asked chatGPT to generate additional colours which suited the palette for positive and negative buttons.
+Given the oldschool, medieval and MMO related nature of the app I chose mostly dark and earth tones for my app. I chose white and off white for the text to maintain readability for users. I asked Claude AI to generate additional colours which suited the palette for positive and negative buttons.
 
-![colour palette](assets/readme_img/runetask_colour_palette.png)
+![colour palette](assets/readme_img/color_palette.png)
 
 ### Fonts
 
 For the fonts I chose  Metamorphous - Designed by James Grieshaber from GoogleFonts - This suited my medieval style with its serifs but is still quite readable. 
 
-I decided to use the alternative font Roboto - Designed by Christian Robertson for areas where I thought the readability was particularly important such as buttons and notification messages.
+I decided to use the alternative font Roboto - Designed by Christian Robertson for areas where I thought the readability was particularly important such as buttons, notification messages and information paragraphs.
 
 ![Google Fonts: Metamorphous & Roboto](assets/readme_img/runetask_fonts.png)
 
@@ -83,11 +83,89 @@ I decided to use the alternative font Roboto - Designed by Christian Robertson f
 
 This project was created using the agile methodology, particularly in relation to creating granular user stories which streamlines the development process. All of these user stories were gathered into a project kanban board on GitHub where I could pull stories from the backlog to the in progress column. Once I had completed the tasks they were moved into the completed column.  
 
-_img of project board_
+![Project board in progress](assets/readme_img/project_board_progress.png)
 
 ### User Stories
 
-_All user stories marked with could should might and wont_
+Listed below are the primary user stories that I created during my planing process with their relevant acceptance criteria.
+
+**Create and account**
+
+As a *user* I can *create an account* so that I can *log in and use the website*.
+
+Acceptance criteria
+- Sign up page checks password validity.
+- Sign up page stores a registered user in the database.
+- User can log in after account creation.
+
+**Log in to account**
+
+As a *user* I can *log in to my account* so that I can *see my saved tasks*.
+
+Acceptance criteria
+- Login form accepts valid details.
+- User details are saved to database.
+- Logged in users cannot access login or signup pages
+
+**Create a new to-do list**
+
+As a *user* I can *create a new list* so that I can *keep track of my goals*.
+
+Acceptance criteria
+- New list button generates form for to-do list creation.
+- New list can be saved to the database and accessed with relevant permissions
+
+**Delete to-do list**
+
+As a *user* I can *delete my to-do list* so that I can *control my to-do list profile*.
+
+Acceptance criteria
+- Delete button removes task from database.
+- Only lists related to the user can be deleted by said user. No cross user post deletion.
+- Delete option prompts a confirmation message for the user.
+
+**View all lists from the admin panel**
+
+As a *superuser* I can *view all lists from the admin panel* so that I can *moderate publicly posted lists*.
+
+Acceptance criteria
+- Admin panel displays all lists.
+- Lists can be organised by public and private.
+
+**View all lists on the homepage**
+
+As a *user* I can *view public lists on the homepage* so that I can *see what other users are up to*.
+
+Acceptance criteria
+- Display only public marked and approved lists.
+- Pagination on homepage for scrolling public tasks.
+- Each public task displays the relevant task information.
+
+**Request a public list**
+
+As a *user* I can *request that my list be made public* so that I can *share it with other users*.
+
+Acceptance criteria
+- Public button on list creation notifies admin of lists to be made public.
+- Posts that are marked as public are displayed on the homepage.
+- Posts can be re-marked as private in the future, removing the list from the frontpage without need for admin approval.
+
+**Mark to-do list as completed**
+
+As a *user* I can *mark my list as complete* so that I can *display my achievements*.
+
+Acceptance criteria
+- Editing lists includes 'complete' checkbox.
+- Ticking 'complete' changes the display of the task.
+
+**Link character to profile**
+
+As a *user* I can *link my RuneScape character to my profile* so that I can *keep track of my stats*.
+
+Acceptance criteria
+- Entered user name requests character data from runescape API.
+- Characters are saved to the user database table.
+- Website section updates with character statistics.
 
 ### MoSCoW
 
