@@ -104,6 +104,10 @@ Given the oldschool, medieval and MMO related nature of the app I chose earth to
 </details>
 <br>
 
+Throughout the development process I regularly checked by website again online constrast checkers in order to make sure that the text was readable. 
+
+
+
 ### Fonts
 
 For the fonts I chose  Metamorphous - Designed by James Grieshaber from GoogleFonts - This suited my medieval style with its serifs but is still quite readable. 
