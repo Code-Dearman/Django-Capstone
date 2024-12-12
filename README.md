@@ -236,8 +236,8 @@ __Users can (click headings to expand images):__
 
 <details>
 <summary>Request their list to be made public</summary>
-<IMG src="assets/readme_img/request_public_list.png" alt="Request public list example">
 <IMG src="assets/readme_img/request_public_list2.png" alt="Second request public list example">
+<IMG src="assets/readme_img/request_public_list.png" alt="Request public list example">
 </details>
 
 <details>
@@ -256,7 +256,8 @@ __Users can (click headings to expand images):__
 </details>
 
 
-__Superusers can:__
+__Superusers can (click headings to expand images):__
+
 - View all public lists
 - Approve public list requests
 - Create and delete lists
