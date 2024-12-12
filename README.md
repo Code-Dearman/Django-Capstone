@@ -205,7 +205,7 @@ This last point was particulary importand for my project as I have a public area
 
 ## Features
 
-Users can (click headings to expand images):
+__Users can (click headings to expand images):__
 
 <details>
 <summary>View public lists on the homepage</summary>
@@ -240,14 +240,23 @@ Users can (click headings to expand images):
 <IMG src="assets/readme_img/request_public_list2.png" alt="Second request public list example">
 </details>
 
-- Request their list to be made public
-- Link their runescape character to their profile
-- Delete their to-do lists
-- Mark their to-do lists as completed
+<details>
+<summary>Link RuneScape character to their profile</summary>
+<IMG src="assets/readme_img/add_character.png" alt="add character example">
+</details>
 
-_img of various features_
+<details>
+<summary>Delete their to-do lists</summary>
+<IMG src="assets/readme_img/delete_list.png" alt="delete list example">
+</details>
 
-Superusers can:
+<details>
+<summary>Mark their to-do lists as completed</summary>
+<IMG src="assets/readme_img/mark_complete.png" alt="mark complete example">
+</details>
+
+
+__Superusers can:__
 - View all public lists
 - Approve public list requests
 - Create and delete lists
