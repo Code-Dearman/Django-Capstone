@@ -258,11 +258,21 @@ __Users can (click headings to expand images):__
 
 __Superusers can (click headings to expand images):__
 
-- View all public lists
-- Approve public list requests
-- Create and delete lists
+<details>
+<summary>View all lists</summary>
+<IMG src="assets/readme_img/mark_complete.png" alt="admin view example">
+</details>
 
-_img of superuser features_
+<details>
+<summary>Approve public list requests</summary>
+<IMG src="assets/readme_img/mark_complete.png" alt="admin approval example">
+</details>
+
+<details>
+<summary>Create and delete lists</summary>
+<IMG src="assets/readme_img/mark_complete.png" alt="admin list delete example">
+</details>
+
 
 ## Future Features
 
