@@ -6,6 +6,7 @@ from django.utils.text import slugify
 
 STATUS = ((0, "Private"), (1, "Public"))
 
+
 class To_Do_List(models.Model):
 
     """
@@ -49,7 +50,7 @@ class UserCharacter(models.Model):
 
     def __str__(self):
         return self.character_name
-    
+
 
 class Skills(models.Model):
     """

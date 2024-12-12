@@ -9,11 +9,11 @@ from .character_script import get_character_data
 
 # Create your views here.
 
+
 class ToDoListView(generic.ListView):
     """
-    Displays to do lists that are selected 'public' by user and 'approved=True' by admin. 
-    Sorted by newest first.
-
+    Displays to do lists that are selected 'public' by user 
+    and 'approved=True' by admin. Sorted by newest first.
     """
     queryset = To_Do_List.objects.filter(status=1, approved=True).order_by("-created_on")
     template_name = 'to_do/to_do_list.html'
@@ -77,7 +77,8 @@ def single_list_view(request, slug):
 @login_required
 def edit_list(request, slug=None):
     """
-    Dispalys and editable form for the user, accepting a post request if the form has a slug.
+    Dispalys and editable form for the user, 
+    accepting a post request if the form has a slug.
     If no slug, creates a new to-do list.
     """
     if slug:
@@ -97,7 +98,8 @@ def edit_list(request, slug=None):
         to_do_list.save()
 
         if action == 'created':
-            messages.success(request, f"Well done {request.user}, you just {action} a new list! <br> If you have marked it as public it must be approved by an admin before it will be visable on the home page")
+            messages.success(request, f"Well done {request.user}, you just {action} a new list! <br> \
+            If you have marked it as public it must be approved by an admin before it will be visable on the home page")
         else:
             messages.success(request, f"Well done {request.user}, you just {action} an existing list!")
 
