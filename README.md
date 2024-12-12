@@ -36,7 +36,6 @@ GitHub project board: [RuneTask Project](https://github.com/users/Code-Dearman/p
 9. [Testing](#testing)
     - [Validation Testing](#validation-testing)
     - [User Testing](#user-testing)
-    - [Automated Testing](#automated-testing)
 10. [Deployment](#deployment)
     - [GitHub](#github)
     - [Django](#django)
@@ -325,7 +324,7 @@ There were a variety of features that I thought of at the beginning of the proje
 
 - Personal images for user which would display on their profile page and next to their lists.
 
-- Add images directly into to-do lists in order for users to share screenshots of their achievements.
+- Add images directly to to-do lists in order for users to share screenshots of their achievements.
 
 - A system for notifying users when their public list requests have been approved. 
 
@@ -430,10 +429,6 @@ Manual user testing was done by me. I made sure that I could access and perform 
 **Browser Compatablity**: The website was tested Firefox and Chrome for desktop view and Safari and Firefox for mobile view.
 
 **Responsiveness Testing**: I tested the responsiveness of all areas of the website on both desktop and mobile phone views.
-
-### Automated Testing
-
-_Write about automated tests or delete if unable to complete in time_
 
 ## Deployment
 
