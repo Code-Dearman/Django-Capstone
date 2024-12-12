@@ -50,11 +50,14 @@ GitHub project board: [RuneTask Project](https://github.com/users/Code-Dearman/p
 
 Using the app is simple! Unregistered users can stay on the homepage to view tasks which registered users have made public. However, to start working with the app you must register. 
 
-Click the 'Sign Up' link in the navigation bar to create and account. Once this step is complete you can start making lists. Navigate to the 'Profile' link and press the 'New Task' button. Here you can specify what skill you are planning to train, outline what steps you must take (using the rich text editor) and choose whether to make the list public or keep it private.
+Click the 'Sign Up' link in the navigation bar to create and account. Once this step is complete you can start making lists. Navigate to the 'Profile' link and press the 'Create New List' button. Here you can outline the steps you must take (using the rich text editor), choose whether to make the list public or keep it private and finally mark it as complete (if you've finished it of course!).
+
+If you make a mistake or decide that you no longer want to use this list you can edit or delete it by accessing the list through your profile and pressing the 'edit' or 'delete' links.
+
+If you want to view one list in closer detail simply press or click on the heading and it will take you to a view of just that list. 
 
 For even greater functionality you can use the 'link character' button feature to safely use runescape's own Oldschool Hiscrores API to retrieve details about your character. Doing this allows your profile to display your current stats which you can incorporate into the task list. 
 
-When you've completed your task you can edit the task list and mark it as complete.
 
 ## UX - User Experience
 
@@ -62,11 +65,45 @@ When you've completed your task you can edit the task list and mark it as comple
 
 _Discuss the accessibility and responsiveness of the app and choices such as buttons and organisation._
 
+I began my design process using mobile first principles. The choice of bootrap was essential in that it allowed me to create a grid structure on all the pages which, when enlarged to desktop size would scale to fit the available space. As with many websites there are certain breakpoints where the scaling doesn't work in the way it should (see below for example) however I found that on the whole the project maintains a cohesive look throughout.
+
+<br>
+<details>
+<summary>Scaling issue (click to expand)</summary>
+<IMG src="assets/readme_img/scaling_issue.png" alt="Scaling issue example">
+</details>
+<br>
+
+User interface choices such as buttons were decided upon during development as I went though a range of colour and shape choices. On the whole I tried to stay with a 'red for negative' and 'green for positive' theme and this is the most recognisable. I stayed away from using too many ':hover' effects as I found that this didn't suit my semi-retro style choice. 
+
+<br>
+<details>
+<summary>Buttons (click to expand)</summary>
+<IMG src="assets/readme_img/buttons.png" alt="Buttons example">
+</details>
+<br>
+
+In terms of organisation I found the layout developed quite organically. The user is presented with a home page where there is a short introduction, asking them to look around or create an account so start making lists. This leads the user to the login and signup buttons on the navbar at the top. Once an account has been made all other pertinent information can be found in the profile area. There are calls to action to either 'Create a new list' or 'add a character'. 
+
+Given that this website it aimed at RuneScape players I would suggest that these features are self explanatory, other online tools offer a very similar experience where users will enter the name of their character to pull their details from the runescape API.
+
+<br>
+<details>
+<summary>Call to action (click to expand)</summary>
+<IMG src="assets/readme_img/call_action.png" alt="call to action example">
+</details>
+<br>
+
 ### Colour Palette
 
-Given the oldschool, medieval and MMO related nature of the app I chose mostly dark and earth tones for my app. I chose white and off white for the text to maintain readability for users. I asked Claude AI to generate additional colours which suited the palette for positive and negative buttons.
+Given the oldschool, medieval and MMO related nature of the app I chose earth tones and gold accents for my app. I chose black the text to maintain readability for users. I asked Claude AI to generate additional colours which suited the palette for positive and negative buttons.
 
-![colour palette](assets/readme_img/color_palette.png)
+<br>
+<details>
+<summary>Colour palette</summary>
+<IMG src="assets/readme_img/color_palette.png" alt="colour palette example">
+</details>
+<br>
 
 ### Fonts
 
