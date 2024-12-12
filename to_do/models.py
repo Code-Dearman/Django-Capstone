@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 
-# Create your models here.
 
 STATUS = ((0, "Private"), (1, "Public"))
 
@@ -15,7 +14,11 @@ class To_Do_List(models.Model):
 
     list_title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="to_do_list")
+    author = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="to_do_list"
+    )
     list_content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -44,7 +47,11 @@ class UserCharacter(models.Model):
     """
     Model which represents one Runscape character per user.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="character")
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name="character"
+    )
     character_name = models.CharField(max_length=50, unique=True)
     last_updated = models.DateTimeField(auto_now=True)
 
@@ -56,7 +63,11 @@ class Skills(models.Model):
     """
     Models which represents all skills related to a character.
     """
-    user_character = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name="skills")
+    user_character = models.ForeignKey(
+        UserCharacter,
+        on_delete=models.CASCADE,
+        related_name="skills"
+    )
     name = models.CharField(max_length=50)
     level = models.IntegerField(default=1)
     experience = models.BigIntegerField(default=0)
